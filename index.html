@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Megan Yap | UX Design Intern</title>
-    <meta name="description"
-        content="Portfolio of Megan Yap - UX Design Intern at Cornell University. Incoming at Google.">
-    <link rel="stylesheet" href="style.css">
+    <title>Ashutosh Dhanawade | UI UX Designer</title>
+    <meta name="description" content="Portfolio of Ashutosh Dhanawade - Graphics Designer at Valasys Media.">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/portfolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -153,10 +153,10 @@
         <div class="content-container">
             <div class="project-grid">
                 <!-- Lingofable Project Card -->
-                <a href="lingofable.html" class="project-card">
+                <a href="projects/lingofable/index.html" class="project-card">
                     <span class="project-card-num">No. 01</span>
                     <div class="project-card-image-wrapper">
-                        <img src="hero-banner.png" alt="Lingofable" class="project-card-image">
+                        <img src="assets/images/hero-banner.png" alt="Lingofable" class="project-card-image">
                         <div class="view-case-study">
                             <i class="fas fa-eye"></i> VIEW CASE STUDY
                         </div>
@@ -190,10 +190,10 @@
                 </a>
 
                 <!-- Valasys Project Card -->
-                <a href="valasys.html" class="project-card">
+                <a href="projects/valasys/index.html" class="project-card">
                     <span class="project-card-num">No. 02</span>
                     <div class="project-card-image-wrapper">
-                        <img src="hero-banner.png" alt="Valasys" class="project-card-image"
+                        <img src="assets/images/hero-banner.png" alt="Valasys" class="project-card-image"
                             style="filter: hue-rotate(45deg) brightness(0.7);">
                         <div class="view-case-study">
                             <i class="fas fa-eye"></i> VIEW CASE STUDY
@@ -230,38 +230,7 @@
         </div>
     </div>
 
-    <script>
-        function updateTime() {
-            const now = new Date();
-            const timeString = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', second: '2-digit', hour12: true });
-            document.getElementById('current-time').textContent = timeString;
-        }
-        setInterval(updateTime, 1000);
-        updateTime();
-
-        // Profile Modal Logic
-        const profileBtn = document.getElementById('profile-btn');
-        const modalOverlay = document.getElementById('profile-modal');
-        const modalClose = document.getElementById('modal-close');
-
-        profileBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            modalOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent scroll
-        });
-
-        modalClose.addEventListener('click', () => {
-            modalOverlay.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        });
-
-        modalOverlay.addEventListener('click', (e) => {
-            if (e.target === modalOverlay) {
-                modalOverlay.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        });
-    </script>
+    <script src="assets/js/common.js"></script>
 </body>
 
 </html>
