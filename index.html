@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Megan Yap | UX Design Intern</title>
-    <meta name="description" content="Portfolio of Megan Yap - UX Design Intern at Cornell University. Incoming at Google.">
+    <meta name="description"
+        content="Portfolio of Megan Yap - UX Design Intern at Cornell University. Incoming at Google.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -14,13 +15,14 @@
     <!-- Sidebar -->
     <aside class="sidebar">
         <div class="profile-section">
-            <img src="https://ui-avatars.com/api/?name=Megan+Yap&background=9b4d6d&color=fff&size=100" alt="Megan Yap"
-                class="profile-img">
-            <h2 class="profile-name">Megan Yap</h2>
-            <p class="profile-handle" style="font-size: 0.75rem; color: #999; margin-bottom: 4px;">@meganyap • United
-                States</p>
-            <p class="profile-title" style="margin-bottom: 12px; font-weight: 500;">UX Design Intern</p>
-            <p class="profile-exp" style="font-size: 0.75rem; color: #666; margin-bottom: 10px;">Less Than 1 Year
+            <img src="https://ui-avatars.com/api/?name=Ashutosh+Dhanawade&background=9b4d6d&color=fff&size=100"
+                alt="Ashutosh Dhanawade" class="profile-img">
+            <h2 class="profile-name">Ashutosh Dhanawade</h2>
+            <p class="profile-handle" style="font-size: 0.75rem; color: #999; margin-bottom: 4px;"><a
+                    href="https://www.linkedin.com/in/ashutosh-dhanawade-574258210/"
+                    style="color: inherit; text-decoration: none;" target="_blank">@ashutosh</a> • India</p>
+            <p class="profile-title" style="margin-bottom: 12px; font-weight: 500;">UI UX Designer</p>
+            <p class="profile-exp" style="font-size: 0.75rem; color: #666; margin-bottom: 10px;">Less Than 3 Years
                 Experience Includes:</p>
             <div class="google-badge" style="display: flex; justify-content: center; margin-bottom: 25px;">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Logo.svg" alt="Google"
@@ -28,10 +30,10 @@
             </div>
 
             <div style="display: flex; gap: 10px; align-items: center; justify-content: center; margin-bottom: 30px;">
-                <button class="btn btn-primary"
-                    style="flex: 1; border-radius: 30px; font-size: 0.8rem; background-color: #1a1a1a;">
+                <a href="mailto:ajdhanawade2001@gmail.com" class="btn btn-primary"
+                    style="flex: 1; border-radius: 30px; font-size: 0.8rem; background-color: #1a1a1a; text-decoration: none; display: flex; align-items: center; justify-content: center; color: white;">
                     <i class="fas fa-envelope" style="margin-right: 8px;"></i> Message
-                </button>
+                </a>
                 <div
                     style="width: 36px; height: 36px; border-radius: 10px; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; color: #666; cursor: pointer;">
                     <i class="far fa-bookmark"></i>
@@ -41,7 +43,7 @@
 
         <ul class="nav-menu">
             <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="javascript:void(0)" class="nav-link active" id="profile-btn">
                     <i class="fas fa-user"></i> Profile
                 </a>
             </li>
@@ -53,16 +55,47 @@
         </ul>
     </aside>
 
+    <!-- Profile Modal -->
+    <div class="modal-overlay" id="profile-modal">
+        <div class="profile-card-modal">
+            <span class="modal-close" id="modal-close">&times;</span>
+            <div class="modal-bg-pattern"></div>
+            <div class="modal-content">
+                <img src="https://ui-avatars.com/api/?name=Ashutosh+Dhanawade&background=9b4d6d&color=fff&size=200"
+                    alt="Ashutosh Dhanawade" class="modal-profile-img">
+                <h2 class="modal-name">Ashutosh Dhanawade</h2>
+                <p class="modal-handle">@ashutosh . India</p>
+
+                <h3 class="modal-section-title">About</h3>
+                <p class="modal-about">
+                    Welcome to Ashutosh's World, where creativity meets innovation. Dive into a realm of design
+                    discoveries waiting to be explored. My expertise in design offers a unique perspective that
+                    transforms ideas into reality. Explore the possibilities and bring your visions to life with my
+                    exceptional design skills.
+                </p>
+
+                <h3 class="modal-exp-title">Less Than 3 Years Experience Includes:</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Logo.svg" alt="Google"
+                    class="modal-google-icon">
+            </div>
+        </div>
+    </div>
+
     <!-- Secondary Sidebar (Explore) -->
     <aside class="secondary-sidebar">
         <div class="profile-bio" style="margin-bottom: 40px;">
-            <p style="font-size: 1.1rem; font-weight: 600; font-family: 'Outfit'; color: #b35a76; margin-bottom: 15px;">*</p>
-            <h2 style="font-family: 'Outfit'; font-size: 1.8rem; line-height: 1.2; margin-bottom: 15px;">Megan Yap</h2>
-            <p style="font-size: 0.7rem; text-transform: uppercase; font-weight: 700; color: #888; letter-spacing: 1px; margin-bottom: 20px;">CS & LINGUISTICS @ CORNELL</p>
+            <p style="font-size: 1.1rem; font-weight: 600; font-family: 'Outfit'; color: #b35a76; margin-bottom: 15px;">
+                *</p>
+            <h2 style="font-family: 'Outfit'; font-size: 1.8rem; line-height: 1.2; margin-bottom: 15px;">Ashutosh
+                Dhanawade</h2>
+            <p
+                style="font-size: 0.7rem; text-transform: uppercase; font-weight: 700; color: #888; letter-spacing: 1px; margin-bottom: 20px;">
+                UI UX DESIGNER</p>
             <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">
-                I am a dreamer who loves building delightful software that solves real problems.
+                I am a passionate UI/UX Designer dedicated to creating user-centric digital experiences that are both
+                beautiful and functional.
                 <br><br>
-                Incoming @Google, previously at @Splunk, @RxPost, and @Clear (YC W21).
+                Focused on solving complex design problems with clean, elegant solutions.
             </p>
         </div>
 
@@ -79,7 +112,8 @@
                     <a href="#" class="sidebar-list-link"><span>03.</span> Playground</a>
                 </li>
                 <li class="sidebar-list-item">
-                    <a href="#" class="sidebar-list-link"><span>04.</span> Visitor Gallery <span style="color: #b35a76; margin-left: 5px;">*</span></a>
+                    <a href="#" class="sidebar-list-link"><span>04.</span> Visitor Gallery <span
+                            style="color: #b35a76; margin-left: 5px;">*</span></a>
                 </li>
             </ul>
         </div>
@@ -92,7 +126,7 @@
                 <a href="#">GitHub</a>
                 <a href="#">X</a>
             </div>
-            
+
             <div class="explore-status">
                 <p class="explore-status-time" id="current-time">1:10:35 AM</p>
                 <p class="explore-status-ok">All systems operational</p>
@@ -135,7 +169,8 @@
                         </div>
                     </div>
                     <p class="project-card-desc">
-                        A mobile app focused on language learning through stories with ~200 users. Featured on Cornell's Speaking of Language Podcast.
+                        A mobile app focused on language learning through stories with ~200 users. Featured on Cornell's
+                        Speaking of Language Podcast.
                     </p>
                     <div class="project-card-divider"></div>
                     <div class="project-card-meta">
@@ -158,34 +193,36 @@
                 <a href="valasys.html" class="project-card">
                     <span class="project-card-num">No. 02</span>
                     <div class="project-card-image-wrapper">
-                        <img src="hero-banner.png" alt="Valasys" class="project-card-image" style="filter: hue-rotate(45deg);">
+                        <img src="hero-banner.png" alt="Valasys" class="project-card-image"
+                            style="filter: hue-rotate(45deg) brightness(0.7);">
                         <div class="view-case-study">
                             <i class="fas fa-eye"></i> VIEW CASE STUDY
                         </div>
                     </div>
                     <div class="project-card-header">
-                        <h3 class="project-card-title">Valasys.com</h3>
+                        <h3 class="project-card-title">Valasys Halloween Campaign</h3>
                         <div class="project-card-tags">
                             <span class="project-card-tag">B2B SaaS</span>
-                            <span class="project-card-tag">Web Design</span>
+                            <span class="project-card-tag">Performance Design</span>
                         </div>
                     </div>
                     <p class="project-card-desc">
-                        Leading provider of B2B marketing and sales solutions, helping businesses accelerate revenue growth through data-driven strategies.
+                        🎃 Building a 0→1 Halloween campaign for a Sales Intelligence SaaS, driving high-intent clicks
+                        through thematic positioning without gimmicks.
                     </p>
                     <div class="project-card-divider"></div>
                     <div class="project-card-meta">
                         <div class="project-meta-col">
                             <h4>Role</h4>
-                            <p>Lead Designer</p>
+                            <p>Product Designer, Performance Design</p>
                         </div>
                         <div class="project-meta-col">
                             <h4>Team</h4>
-                            <p>Internal Marketing Team</p>
+                            <p>Marketing Lead, Performance Marketer</p>
                         </div>
                         <div class="project-meta-col">
                             <h4>Timeframe</h4>
-                            <p>Jan 2024 - Present</p>
+                            <p>Oct 2025 (3 weeks)</p>
                         </div>
                     </div>
                 </a>
@@ -201,6 +238,29 @@
         }
         setInterval(updateTime, 1000);
         updateTime();
+
+        // Profile Modal Logic
+        const profileBtn = document.getElementById('profile-btn');
+        const modalOverlay = document.getElementById('profile-modal');
+        const modalClose = document.getElementById('modal-close');
+
+        profileBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scroll
+        });
+
+        modalClose.addEventListener('click', () => {
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                modalOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
     </script>
 </body>
 

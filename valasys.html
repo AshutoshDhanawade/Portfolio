@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Megan Yap | Valasys.com</title>
+    <title>Megan Yap | Valasys Halloween Campaign</title>
     <meta name="description"
-        content="Portfolio of Megan Yap - Product Designer. Case study: Valasys.com.">
+        content="Portfolio of Megan Yap - Product Designer. Case study: Building a Halloween Campaign for a Sales Intelligence SaaS (0 → 1).">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -15,13 +15,12 @@
     <!-- Sidebar -->
     <aside class="sidebar">
         <div class="profile-section">
-            <img src="https://ui-avatars.com/api/?name=Megan+Yap&background=9b4d6d&color=fff&size=100" alt="Megan Yap"
+            <img src="https://ui-avatars.com/api/?name=Ashutosh+Dhanawade&background=9b4d6d&color=fff&size=100" alt="Ashutosh Dhanawade"
                 class="profile-img">
-            <h2 class="profile-name">Megan Yap</h2>
-            <p class="profile-handle" style="font-size: 0.75rem; color: #999; margin-bottom: 4px;">@meganyap • United
-                States</p>
-            <p class="profile-title" style="margin-bottom: 12px; font-weight: 500;">UX Design Intern</p>
-            <p class="profile-exp" style="font-size: 0.75rem; color: #666; margin-bottom: 10px;">Less Than 1 Year
+            <h2 class="profile-name">Ashutosh Dhanawade</h2>
+            <p class="profile-handle" style="font-size: 0.75rem; color: #999; margin-bottom: 4px;"><a href="https://www.linkedin.com/in/ashutosh-dhanawade-574258210/" style="color: inherit; text-decoration: none;" target="_blank">@ashutosh</a> • India</p>
+            <p class="profile-title" style="margin-bottom: 12px; font-weight: 500;">UI UX Designer</p>
+            <p class="profile-exp" style="font-size: 0.75rem; color: #666; margin-bottom: 10px;">Less Than 3 Years
                 Experience Includes:</p>
             <div class="google-badge" style="display: flex; justify-content: center; margin-bottom: 25px;">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Logo.svg" alt="Google"
@@ -29,10 +28,10 @@
             </div>
 
             <div style="display: flex; gap: 10px; align-items: center; justify-content: center; margin-bottom: 30px;">
-                <button class="btn btn-primary"
-                    style="flex: 1; border-radius: 30px; font-size: 0.8rem; background-color: #1a1a1a;">
+                <a href="mailto:ajdhanawade2001@gmail.com" class="btn btn-primary"
+                    style="flex: 1; border-radius: 30px; font-size: 0.8rem; background-color: #1a1a1a; text-decoration: none; display: flex; align-items: center; justify-content: center; color: white;">
                     <i class="fas fa-envelope" style="margin-right: 8px;"></i> Message
-                </button>
+                </a>
                 <div
                     style="width: 36px; height: 36px; border-radius: 10px; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; color: #666; cursor: pointer;">
                     <i class="far fa-bookmark"></i>
@@ -42,7 +41,7 @@
 
         <ul class="nav-menu">
             <li class="nav-item">
-                <a href="index.html" class="nav-link">
+                <a href="javascript:void(0)" class="nav-link" id="profile-btn">
                     <i class="fas fa-user"></i> Profile
                 </a>
             </li>
@@ -53,6 +52,27 @@
             </li>
         </ul>
     </aside>
+
+    <!-- Profile Modal -->
+    <div class="modal-overlay" id="profile-modal">
+        <div class="profile-card-modal">
+            <span class="modal-close" id="modal-close">&times;</span>
+            <div class="modal-bg-pattern"></div>
+            <div class="modal-content">
+                <img src="https://ui-avatars.com/api/?name=Ashutosh+Dhanawade&background=9b4d6d&color=fff&size=200" alt="Ashutosh Dhanawade" class="modal-profile-img">
+                <h2 class="modal-name">Ashutosh Dhanawade</h2>
+                <p class="modal-handle">@ashutosh . India</p>
+                
+                <h3 class="modal-section-title">About</h3>
+                <p class="modal-about">
+                    Welcome to Ashutosh's World, where creativity meets innovation. Dive into a realm of design discoveries waiting to be explored. My expertise in design offers a unique perspective that transforms ideas into reality. Explore the possibilities and bring your visions to life with my exceptional design skills.
+                </p>
+
+                <h3 class="modal-exp-title">Less Than 3 Years Experience Includes:</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Logo.svg" alt="Google" class="modal-google-icon">
+            </div>
+        </div>
+    </div>
 
     <!-- Secondary Sidebar -->
     <aside class="secondary-sidebar">
@@ -67,19 +87,25 @@
                     <a href="#context" class="sidebar-list-link active"><span>01.</span> Context</a>
                 </li>
                 <li class="sidebar-list-item">
-                    <a href="#solution" class="sidebar-list-link"><span>02.</span> The solution</a>
+                    <a href="#problem" class="sidebar-list-link"><span>02.</span> The problem</a>
                 </li>
                 <li class="sidebar-list-item">
-                    <a href="#features" class="sidebar-list-link"><span>03.</span> Features</a>
+                    <a href="#solution" class="sidebar-list-link"><span>03.</span> The solution</a>
                 </li>
                 <li class="sidebar-list-item">
-                    <a href="#interaction" class="sidebar-list-link"><span>04.</span> Interaction design</a>
+                    <a href="#execution" class="sidebar-list-link"><span>04.</span> Execution</a>
                 </li>
                 <li class="sidebar-list-item">
-                    <a href="#onboarding" class="sidebar-list-link"><span>05.</span> Onboarding & conversion</a>
+                    <a href="#landing" class="sidebar-list-link"><span>05.</span> Landing Page</a>
                 </li>
                 <li class="sidebar-list-item">
-                    <a href="#reflection" class="sidebar-list-link"><span>06.</span> Reflection</a>
+                    <a href="#marketing" class="sidebar-list-link"><span>06.</span> Email & Ad creatives</a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#interaction" class="sidebar-list-link"><span>07.</span> Interaction design</a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#reflection" class="sidebar-list-link"><span>08.</span> Reflection</a>
                 </li>
             </ul>
         </div>
@@ -103,184 +129,238 @@
 
         <div class="content-container">
             <!-- Hero Section -->
-            <div class="hero-image-container">
-                <img src="hero-banner.png" alt="Lingofable Banner" class="hero-image">
+            <div class="hero-image-container" style="background: linear-gradient(135deg, #1a1a1a 0%, #333 100%); display: flex; align-items: center; justify-content: center; min-height: 400px; color: white; text-align: center; padding: 40px;">
+                <div>
+                    <p style="font-size: 3rem; margin-bottom: 20px;">🎃</p>
+                    <h1 style="font-size: 2.5rem; margin-bottom: 10px;">Halloween Campaign</h1>
+                    <p style="opacity: 0.7; font-size: 1.2rem;">Driving high-intent clicks through thematic positioning</p>
+                </div>
             </div>
 
             <header class="project-header">
                 <div class="project-tags">
                     <span class="tag">B2B SaaS</span>
-                    <span class="tag">Web Design</span>
+                    <span class="tag">Performance Design</span>
                 </div>
-                <h1 class="project-title">Valasys.com</h1>
+                <h1 class="project-title">🎃 Building a Halloween Campaign for a Sales Intelligence SaaS (0 → 1)</h1>
+                <p class="section-text" style="font-weight: 500; color: #1a1a1a;">
+                    Driving high-intent clicks through thematic positioning, not gimmicks.
+                </p>
                 <p class="section-text">
-                    Valasys is a leading provider of B2B marketing and sales solutions, helping businesses accelerate their revenue growth through data-driven strategies and innovative technology.
+                    We designed and launched a Halloween campaign for a B2B sales intelligence platform, focused on increasing top-of-funnel engagement across ads, email, and landing pages — without compromising trust or product clarity.
                 </p>
 
                 <div class="project-meta-grid">
                     <div class="meta-item">
                         <p class="meta-label">Role</p>
-                        <p class="meta-value">Founder, Product Designer, Marketing</p>
+                        <p class="meta-value">Product Designer, Campaign Strategist, Performance Design</p>
                     </div>
                     <div class="meta-item">
                         <p class="meta-label">Team</p>
-                        <p class="meta-value">Founding Team: 1 PM, 1 Designer, 5 Engineers</p>
+                        <p class="meta-value">Marketing Lead, Performance Marketer</p>
                     </div>
                     <div class="meta-item">
                         <p class="meta-label">Timeline</p>
-                        <p class="meta-value">Oct 2023 - Apr 2024</p>
+                        <p class="meta-value">Oct 2025 (3 weeks)</p>
                     </div>
                     <div class="meta-item">
                         <p class="meta-label">Skills</p>
-                        <p class="meta-value">Video editing, Adobe Photoshop, UI/UX Design</p>
+                        <p class="meta-value">Conversion design, B2B messaging, Landing page UX, Ad & email design</p>
                     </div>
                 </div>
             </header>
 
-            <!-- Language Learning is Tricky -->
+            <!-- CONTEXT -->
             <section id="context" class="section">
-                <span class="section-label">The Problem</span>
-                <h2 class="section-title">Language learning is tricky</h2>
+                <span class="section-label">Context</span>
+                <h2 class="section-title">B2B users don’t “celebrate” campaigns — they evaluate them</h2>
                 <p class="section-text">
-                    Many learners struggle with the jump from basic vocabulary to actual comprehension. Traditional
-                    methods often feel disjointed and lack the context needed for long-term retention.
+                    Unlike B2C, seasonal campaigns in B2B often fail because they feel gimmicky, reduce perceived credibility, or distract from core value. At the same time, ignoring seasonal moments = missed attention.
                 </p>
+                <div class="feature-card" style="background-color: #fdfaf6; border-left: 4px solid var(--accent-color);">
+                    <p style="font-weight: 600; margin-bottom: 10px;">The challenge was clear:</p>
+                    <p style="font-size: 1.2rem; font-style: italic; color: var(--accent-color);">How do we leverage Halloween without diluting trust?</p>
+                </div>
             </section>
 
-            <!-- The Solution -->
-            <section id="solution" class="section">
-                <span class="section-label">The Solution</span>
-                <h2 class="section-title">Comprehensive input at scale, delivered through stories</h2>
+            <!-- THE PROBLEM -->
+            <section id="problem" class="section">
+                <span class="section-label">The Problem</span>
+                <h2 class="section-title">High impressions, low engagement quality</h2>
                 <p class="section-text">
-                    We built a system that generates stories tailored to the user's current level, ensuring they are
-                    always in the "sweet spot" of learning—challenged but not overwhelmed.
+                    From past campaigns:
                 </p>
-
-                <!-- Bento Grid -->
-                <div class="bento-grid">
-                    <div class="bento-item bento-1">
-                        <div class="bento-content">
-                            <h3 class="bento-title">From fairy tales to Reddit threads</h3>
-                            <p class="bento-desc">Diverse content sources to keep learners engaged with real-world
-                                language.</p>
-                        </div>
-                        <img src="bento-1-fairy-tales.png" alt="Fairy tales content" class="bento-img">
+                <div class="features-container" style="grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                    <div class="feature-card">
+                        <h3 class="feature-title">Ads visibility</h3>
+                        <p class="feature-desc">Ads were getting visibility but not strong CTR.</p>
                     </div>
-                    <div class="bento-item bento-2">
-                        <div class="bento-content">
-                            <h3 class="bento-title">Track your progress</h3>
-                            <p class="bento-desc">Visualizing growth through vocabulary mastery and reading streaks.</p>
-                        </div>
-                        <img src="bento-2-track-progress.png" alt="Progress tracking" class="bento-img">
+                    <div class="feature-card">
+                        <h3 class="feature-title">Email engagement</h3>
+                        <p class="feature-desc">Email engagement plateaued at ~1.5–2%.</p>
                     </div>
-                    <div class="bento-item bento-3">
-                        <div class="bento-content">
-                            <h3 class="bento-title">Always at the perfect i+1 difficulty</h3>
-                            <p class="bento-desc">Adaptive algorithms that adjust sentence complexity in real-time.</p>
-                        </div>
-                        <img src="bento-3-i+1-difficulty.png" alt="Adaptive difficulty" class="bento-img">
+                    <div class="feature-card">
+                        <h3 class="feature-title">Landing pages</h3>
+                        <p class="feature-desc">Landing pages had low dwell time due to heavy messaging.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Real Progress -->
-            <section id="features" class="section">
-                <span class="section-label">Design</span>
-                <h2 class="section-title">Designed to help learners make real progress</h2>
+            <!-- THE SOLUTION -->
+            <section id="solution" class="section">
+                <span class="section-label">The Solution</span>
+                <h2 class="section-title">“Uncover Hidden Opportunities” — a theme that fits the product</h2>
+                <p class="section-text">
+                    Instead of going “spooky,” we aligned Halloween with product value: <strong>Sales intelligence = uncovering what others miss.</strong>
+                </p>
+                
+                <div class="bento-grid">
+                    <div class="bento-item bento-1" style="background-color: #1a1a1a; color: white;">
+                        <div class="bento-content">
+                            <h3 class="bento-title" style="color: white;">Core Positioning</h3>
+                            <p class="bento-desc" style="color: rgba(255,255,255,0.7);">“Stop guessing. Start uncovering.”</p>
+                        </div>
+                        <div style="font-size: 4rem; text-align: center; margin-top: 40px; opacity: 0.3;">🕵️‍♂️</div>
+                    </div>
+                    <div class="bento-item bento-2">
+                        <div class="bento-content">
+                            <h3 class="bento-title">The Translation</h3>
+                            <p class="bento-desc">Not ghosts — but pipeline gaps. Hidden data, missed leads, invisible opportunities.</p>
+                        </div>
+                    </div>
+                    <div class="bento-item bento-3">
+                        <div class="bento-content">
+                            <h3 class="bento-title">Brand Alignment</h3>
+                            <p class="bento-desc">Narrative was on-brand, relevant, and memorable without being gimmicky.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            <!-- EXECUTION -->
+            <section id="execution" class="section">
+                <span class="section-label">Execution</span>
+                <h2 class="section-title">Designed as a system, not isolated assets</h2>
+                <p class="section-text">
+                    We didn’t treat ads, emails, and landing pages separately. Everything followed one consistent flow: <strong>Ad → Email → Landing Page → Conversion.</strong>
+                </p>
+                <div class="onboarding-container">
+                    <div class="onboarding-row">
+                        <div class="onboarding-screen" style="background: #f5f1ea; padding: 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+                            <h4 style="margin-bottom: 10px;">Consistent Flow</h4>
+                            <p style="font-size: 0.8rem; color: #666;">Reinforced the same idea across all touchpoints.</p>
+                        </div>
+                        <div class="onboarding-screen" style="background: #f5f1ea; padding: 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+                            <h4 style="margin-bottom: 10px;">Reduced Friction</h4>
+                            <p style="font-size: 0.8rem; color: #666;">Decreased cognitive friction between steps.</p>
+                        </div>
+                        <div class="onboarding-screen" style="background: #f5f1ea; padding: 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+                            <h4 style="margin-bottom: 10px;">Increased Intent</h4>
+                            <p style="font-size: 0.8rem; color: #666;">Each step validated the user's decision to continue.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LANDING PAGE -->
+            <section id="landing" class="section">
+                <span class="section-label">Landing Page</span>
+                <h2 class="section-title">Built for fast clarity, not exploration</h2>
                 <div class="features-container">
                     <div class="features-list">
                         <div class="feature-card active">
-                            <h3 class="feature-title">Story-based Learning</h3>
-                            <p class="feature-desc">Natural language acquisition through immersive narratives.</p>
+                            <h3 class="feature-title">The Hook</h3>
+                            <p class="feature-desc">“How many opportunities are you missing?” — communicatiing value within seconds.</p>
                         </div>
                         <div class="feature-card">
-                            <h3 class="feature-title">Spaced Repetition System</h3>
-                            <p class="feature-desc">Retain vocabulary longer with intelligent review cycles.</p>
+                            <h3 class="feature-title">Reframing the Problem</h3>
+                            <p class="feature-desc">Highlighting that most sales teams rely on incomplete data.</p>
                         </div>
                         <div class="feature-card">
-                            <h3 class="feature-title">Immersive Dictionary</h3>
-                            <p class="feature-desc">Instant context-aware translations within every story.</p>
+                            <h3 class="feature-title">Product Clarity</h3>
+                            <p class="feature-desc">Directly showing how the tool uncovers hidden prospects.</p>
                         </div>
-                        <div class="feature-card">
-                            <h3 class="feature-title">Smart Progress Tracking</h3>
-                            <p class="feature-desc">Monitor your fluency gains with detailed analytics.</p>
+                        <div class="feature-card" style="background-color: #0d5d3e; color: white;">
+                            <h3 class="feature-title" style="color: white;">Result</h3>
+                            <p class="feature-desc" style="color: rgba(255,255,255,0.8);">CTR: 1.9% | Engagement: 10–12s</p>
                         </div>
                     </div>
                     <div class="mockup-container">
-                        <div class="phone-mockup">
-                            <div class="phone-screen">
-                                <img src="onboarding-words.png" alt="App interface">
+                        <div style="background-color: #333; width: 300px; height: 500px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); overflow: hidden;">
+                            <div style="background: #efeadf; height: 100px; padding: 20px;">
+                                <div style="height: 10px; width: 60%; background: #ddd; border-radius: 5px; margin-bottom: 10px;"></div>
+                                <div style="height: 15px; width: 90%; background: #1a1a1a; border-radius: 5px;"></div>
+                            </div>
+                            <div style="padding: 20px; color: white;">
+                                <p style="font-size: 0.8rem; opacity: 0.6;">You're missing pipeline gaps.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Teaching users how to interact -->
-            <section id="interaction" class="section">
-                <span class="section-label">User Interaction</span>
-                <h2 class="section-title">Teaching users how to interact</h2>
-                <div class="feature-card" style="margin-bottom: 40px; background-color: #fcfcfc;">
-                    <p class="section-text">
-                        We developed interactive tutorials that guide users through the core mechanics of the app,
-                        ensuring they understand how to use the immersive reading tools effectively.
-                    </p>
-                    <div style="display: flex; gap: 20px; margin-top: 20px;">
-                        <img src="onboarding-words.png" alt="Interaction 1"
-                            style="width: 48%; border-radius: 12px; border: 1px solid var(--border-color);">
-                        <img src="onboarding-fables.png" alt="Interaction 2"
-                            style="width: 48%; border-radius: 12px; border: 1px solid var(--border-color);">
-                    </div>
-                </div>
-            </section>
-
-            <!-- Onboarding -->
-            <section id="onboarding" class="section">
-                <span class="section-label">Onboarding Flow</span>
-                <h2 class="section-title">Crafting the perfect onboarding</h2>
-                <p class="section-text">
-                    A seamless entry point is crucial for retention. We designed a flow that identifies the user's level
-                    and interests within minutes.
-                </p>
-
+            <!-- MARKETING ASSETS -->
+            <section id="marketing" class="section">
+                <span class="section-label">Marketing Assets</span>
+                <h2 class="section-title">Designed to trigger curiosity, not explain everything</h2>
+                
                 <div class="onboarding-container">
                     <div class="onboarding-row">
-                        <div class="onboarding-screen">
-                            <img src="onboarding-test-1.png" alt="Step 1" class="onboarding-img">
+                        <div class="feature-card" style="grid-column: span 2;">
+                            <h3 class="feature-title">Email Campaign</h3>
+                            <p class="feature-desc">One sharp idea, one clear CTA, one curiosity gap. Subject: “You’re probably missing 30% of your pipeline”.</p>
+                            <p style="margin-top: 15px; font-weight: 700; color: #0d5d3e;">Result: 2.7% CTR (Benchmark: 1.5–2%)</p>
                         </div>
-                        <div class="onboarding-screen">
-                            <img src="onboarding-test-2.png" alt="Step 2" class="onboarding-img">
-                        </div>
-                        <div class="onboarding-screen">
-                            <img src="onboarding-test-3.png" alt="Step 3" class="onboarding-img">
-                        </div>
-                    </div>
-                    <div class="onboarding-row">
-                        <div class="onboarding-screen">
-                            <img src="onboarding-fables.png" alt="Step 4" class="onboarding-img">
-                        </div>
-                        <div class="onboarding-screen">
-                            <img src="onboarding-commit.png" alt="Step 5" class="onboarding-img">
-                        </div>
-                        <div class="onboarding-screen">
-                            <img src="onboarding-words.png" alt="Step 6" class="onboarding-img">
+                        <div class="feature-card">
+                            <h3 class="feature-title">Ad Creatives</h3>
+                            <p class="feature-desc">Pattern interrupt with subtle dark theme and “Hidden” UI elements.</p>
+                            <p style="margin-top: 15px; font-weight: 700; color: #0d5d3e;">Result: 2% CTR</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Learning -->
+            <!-- INTERACTION DESIGN -->
+            <section id="interaction" class="section">
+                <span class="section-label">Interaction & Behavior Design</span>
+                <h2 class="section-title">Reducing friction across the funnel</h2>
+                <p class="section-text">
+                    Key decisions included consistent messaging across all touchpoints and progressive disclosure (ad → email → LP). B2B users scan fast and ignore fluff; we respected that behavior.
+                </p>
+                <div class="feature-card" style="background-color: #f5f1ea;">
+                    <p style="font-weight: 600;">Why this worked:</p>
+                    <ul style="margin-top: 10px; list-style-position: inside; color: #666;">
+                        <li>Scan fast</li>
+                        <li>Decide quickly</li>
+                        <li>Ignore fluffy decoration</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- REFLECTION -->
             <section id="reflection" class="section">
                 <span class="section-label">Reflection</span>
-                <h2 class="section-title">What we learned</h2>
-                <p class="section-text">
-                    Building Lingofable from scratch taught us the importance of user feedback and iterative design. We
-                    learned that simple is often better when it comes to learning tools.
-                </p>
-
-                <div class="reflection-photo-container">
-                    <img src="reflection-photo.jpg" alt="Team meeting" class="reflection-photo">
+                <h2 class="section-title">What I learned</h2>
+                <div class="features-container" style="grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                    <div class="feature-card">
+                        <h3 class="feature-title">Product Truth</h3>
+                        <p class="feature-desc">Thematic campaigns must map to product truth or they weaken the value.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 class="feature-title">Clarity > Creativity</h3>
+                        <p class="feature-desc">Clarity beats creativity in B2B. Creativity should support understanding.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 class="feature-title">Speed = Conversion</h3>
+                        <p class="feature-desc">10–12s engagement means users got what they needed fast.</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 60px; padding: 40px; background: #1a1a1a; color: white; border-radius: 24px; text-align: center;">
+                    <h3 style="color: white; font-size: 1.8rem; margin-bottom: 20px;">Final Thought</h3>
+                    <p style="font-style: italic; opacity: 0.8; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                        “Seasonal campaigns in B2B shouldn’t feel like decoration. They should feel like a sharper way to communicate the same value.”
+                    </p>
                 </div>
             </section>
         </div>
@@ -356,6 +436,29 @@
                     link.classList.add('active');
                 }
             });
+        });
+
+        // Profile Modal Logic
+        const profileBtn = document.getElementById('profile-btn');
+        const modalOverlay = document.getElementById('profile-modal');
+        const modalClose = document.getElementById('modal-close');
+
+        profileBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scroll
+        });
+
+        modalClose.addEventListener('click', () => {
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                modalOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
         });
     </script>
 </body>

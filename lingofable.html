@@ -15,13 +15,12 @@
     <!-- Sidebar -->
     <aside class="sidebar">
         <div class="profile-section">
-            <img src="https://ui-avatars.com/api/?name=Megan+Yap&background=9b4d6d&color=fff&size=100" alt="Megan Yap"
+            <img src="https://ui-avatars.com/api/?name=Ashutosh+Dhanawade&background=9b4d6d&color=fff&size=100" alt="Ashutosh Dhanawade"
                 class="profile-img">
-            <h2 class="profile-name">Megan Yap</h2>
-            <p class="profile-handle" style="font-size: 0.75rem; color: #999; margin-bottom: 4px;">@meganyap • United
-                States</p>
-            <p class="profile-title" style="margin-bottom: 12px; font-weight: 500;">UX Design Intern</p>
-            <p class="profile-exp" style="font-size: 0.75rem; color: #666; margin-bottom: 10px;">Less Than 1 Year
+            <h2 class="profile-name">Ashutosh Dhanawade</h2>
+            <p class="profile-handle" style="font-size: 0.75rem; color: #999; margin-bottom: 4px;"><a href="https://www.linkedin.com/in/ashutosh-dhanawade-574258210/" style="color: inherit; text-decoration: none;" target="_blank">@ashutosh</a> • India</p>
+            <p class="profile-title" style="margin-bottom: 12px; font-weight: 500;">UI UX Designer</p>
+            <p class="profile-exp" style="font-size: 0.75rem; color: #666; margin-bottom: 10px;">Less Than 3 Years
                 Experience Includes:</p>
             <div class="google-badge" style="display: flex; justify-content: center; margin-bottom: 25px;">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Logo.svg" alt="Google"
@@ -29,10 +28,10 @@
             </div>
 
             <div style="display: flex; gap: 10px; align-items: center; justify-content: center; margin-bottom: 30px;">
-                <button class="btn btn-primary"
-                    style="flex: 1; border-radius: 30px; font-size: 0.8rem; background-color: #1a1a1a;">
+                <a href="mailto:ajdhanawade2001@gmail.com" class="btn btn-primary"
+                    style="flex: 1; border-radius: 30px; font-size: 0.8rem; background-color: #1a1a1a; text-decoration: none; display: flex; align-items: center; justify-content: center; color: white;">
                     <i class="fas fa-envelope" style="margin-right: 8px;"></i> Message
-                </button>
+                </a>
                 <div
                     style="width: 36px; height: 36px; border-radius: 10px; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; color: #666; cursor: pointer;">
                     <i class="far fa-bookmark"></i>
@@ -42,7 +41,7 @@
 
         <ul class="nav-menu">
             <li class="nav-item">
-                <a href="index.html" class="nav-link">
+                <a href="javascript:void(0)" class="nav-link" id="profile-btn">
                     <i class="fas fa-user"></i> Profile
                 </a>
             </li>
@@ -53,6 +52,27 @@
             </li>
         </ul>
     </aside>
+
+    <!-- Profile Modal -->
+    <div class="modal-overlay" id="profile-modal">
+        <div class="profile-card-modal">
+            <span class="modal-close" id="modal-close">&times;</span>
+            <div class="modal-bg-pattern"></div>
+            <div class="modal-content">
+                <img src="https://ui-avatars.com/api/?name=Ashutosh+Dhanawade&background=9b4d6d&color=fff&size=200" alt="Ashutosh Dhanawade" class="modal-profile-img">
+                <h2 class="modal-name">Ashutosh Dhanawade</h2>
+                <p class="modal-handle">@ashutosh . India</p>
+                
+                <h3 class="modal-section-title">About</h3>
+                <p class="modal-about">
+                    Welcome to Ashutosh's World, where creativity meets innovation. Dive into a realm of design discoveries waiting to be explored. My expertise in design offers a unique perspective that transforms ideas into reality. Explore the possibilities and bring your visions to life with my exceptional design skills.
+                </p>
+
+                <h3 class="modal-exp-title">Less Than 3 Years Experience Includes:</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Logo.svg" alt="Google" class="modal-google-icon">
+            </div>
+        </div>
+    </div>
 
     <!-- Secondary Sidebar -->
     <aside class="secondary-sidebar">
@@ -357,6 +377,29 @@
                     link.classList.add('active');
                 }
             });
+        });
+
+        // Profile Modal Logic
+        const profileBtn = document.getElementById('profile-btn');
+        const modalOverlay = document.getElementById('profile-modal');
+        const modalClose = document.getElementById('modal-close');
+
+        profileBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scroll
+        });
+
+        modalClose.addEventListener('click', () => {
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                modalOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
         });
     </script>
 </body>
