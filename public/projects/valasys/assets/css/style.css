@@ -1,0 +1,85 @@
+/* Valasys Halloween Campaign Specific Overrides */
+
+.hero-image-container.halloween-hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+.halloween-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.halloween-hero p {
+    opacity: 0.7;
+    font-size: 1.2rem;
+}
+
+.halloween-hero .emoji {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.project-title-halloween {
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.feature-card.halloween-problem {
+    background-color: #fdfaf6;
+    border-left: 4px solid var(--accent-color);
+}
+
+.feature-card.halloween-problem p:first-child {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.feature-card.halloween-problem p:last-child {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--accent-color);
+}
+
+.bento-item.halloween-dark {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.bento-item.halloween-dark .bento-title {
+    color: white;
+}
+
+.bento-item.halloween-dark .bento-desc {
+    color: rgba(255,255,255,0.7);
+}
+
+.onboarding-screen.halloween-step {
+    background: #f5f1ea;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.feature-card.halloween-result {
+    background-color: #0d5d3e;
+    color: white;
+}
+
+.feature-card.halloween-result .feature-title {
+    color: white;
+}
+
+.feature-card.halloween-result .feature-desc {
+    color: rgba(255,255,255,0.8);
+}

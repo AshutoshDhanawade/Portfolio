@@ -1,0 +1,1761 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;1,400&display=swap');
+
+/* ============================================
+   FanCrew Case Study â€” Project-Specific Styles
+   ============================================ */
+
+/* Ashu voice â€” serif italic editorial text */
+.ashu-voice {
+    font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+    font-style: italic;
+}
+
+/* Purple Accent System */
+:root {
+    --fc-purple: #7c5cbf;
+    --fc-purple-light: #f0ebf7;
+    --fc-purple-dark: #5b3d99;
+    --fc-purple-muted: rgba(124, 92, 191, 0.12);
+}
+
+/* Override meta grid for FanCrew purple (scoped to the FanCrew page) */
+.fc-page .meta-item {
+    background-color: #8a65c5 !important;
+}
+
+.fc-page .project-meta-grid {
+    border-color: #7c5cbf !important;
+}
+
+/* ============================================
+   Hero
+   ============================================ */
+.fc-hero {
+    background: linear-gradient(160deg, #2a1a4e 0%, #5b3d99 40%, #7c5cbf 100%);
+    border-radius: 24px;
+    padding: 80px 60px;
+    color: white;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.fc-hero::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.fc-hero-eyebrow {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.fc-hero h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 24px;
+    letter-spacing: -2px;
+}
+
+.fc-hero-statement {
+    font-size: 1.6rem;
+    font-weight: 500;
+    max-width: 600px;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+.fc-hero-desc {
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 620px;
+    opacity: 0.75;
+}
+
+/* ============================================
+   Placeholder Screens
+   ============================================ */
+.fc-placeholder {
+    background-color: #f5f1ea;
+    border: 2px dashed var(--border-color);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #999;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    min-height: 300px;
+    transition: var(--transition);
+}
+
+.fc-placeholder:hover {
+    border-color: var(--fc-purple);
+    color: var(--fc-purple);
+}
+
+.fc-placeholder--hero {
+    min-height: 400px;
+    margin-top: 40px;
+}
+
+.fc-placeholder--wide {
+    width: 100%;
+    min-height: 360px;
+}
+
+.fc-placeholder--tall {
+    min-height: 500px;
+}
+
+.fc-placeholder--screenshot {
+    min-height: 420px;
+}
+
+/* ============================================
+   Section Labels & Numbers
+   ============================================ */
+.fc-section-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--fc-purple);
+    font-weight: 700;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.fc-section-number {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--fc-purple-muted);
+    line-height: 1;
+    margin-bottom: 16px;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* ============================================
+   Editorial Layouts
+   ============================================ */
+.fc-editorial {
+    max-width: 680px;
+    margin-bottom: 60px;
+}
+
+.fc-editorial--wide {
+    max-width: 100%;
+}
+
+.fc-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+    margin-bottom: 60px;
+}
+
+.fc-two-col--narrow {
+    gap: 40px;
+}
+
+.fc-two-col-text {
+    max-width: 480px;
+}
+
+/* ============================================
+   Callouts
+   ============================================ */
+.fc-callout {
+    background-color: var(--fc-purple-light);
+    border-left: 4px solid var(--fc-purple);
+    border-radius: 0 12px 12px 0;
+    padding: 32px 36px;
+    margin: 40px 0;
+}
+
+.fc-callout p {
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--fc-purple-dark);
+    line-height: 1.6;
+    max-width: 640px;
+}
+
+.fc-callout--dark {
+    background-color: #1a1a1a;
+    border-left-color: var(--fc-purple);
+}
+
+.fc-callout--dark p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* ============================================
+   Statement / Emphasis Blocks
+   ============================================ */
+.fc-statement {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin: 40px 0;
+    font-family: 'Outfit', sans-serif;
+    max-width: 680px;
+}
+
+.fc-statement--large {
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+}
+
+.fc-statement--purple {
+    color: var(--fc-purple);
+}
+
+/* ============================================
+   Dark Section
+   ============================================ */
+.fc-dark-section {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 80px 60px;
+    border-radius: 24px;
+    margin-bottom: 100px;
+}
+
+.fc-dark-section h2 {
+    color: white;
+}
+
+.fc-dark-section .fc-section-label {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.fc-dark-section .fc-section-number {
+    color: rgba(124, 92, 191, 0.4);
+}
+
+.fc-dark-section .fc-statement {
+    color: white;
+}
+
+.fc-dark-section .fc-callout p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ============================================
+   Role Section
+   ============================================ */
+.fc-role-intro {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    width: 100%;
+    margin-bottom: 50px;
+    line-height: 1.7;
+}
+
+.fc-role-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.fc-role-group {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 32px 28px;
+}
+
+.fc-role-group h3 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: var(--fc-purple);
+}
+
+.fc-role-list {
+    list-style: none;
+}
+
+.fc-role-list li {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    line-height: 1.5;
+}
+
+.fc-role-list li:last-child {
+    border-bottom: none;
+}
+
+.fc-role-end {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.5;
+    max-width: 600px;
+    margin-top: 40px;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* ============================================
+   Workflow Diagrams
+   ============================================ */
+.fc-flow {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.fc-flow-step {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.fc-flow-step:hover {
+    border-color: var(--fc-purple);
+    background-color: var(--fc-purple-light);
+}
+
+.fc-flow-arrow {
+    color: var(--fc-purple);
+    font-size: 0.9rem;
+    padding: 0 6px;
+    flex-shrink: 0;
+    opacity: 0.6;
+}
+
+.fc-flow--vertical {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.fc-flow--vertical .fc-flow-arrow {
+    transform: rotate(90deg);
+    padding: 6px 0;
+}
+
+/* ============================================
+   Diagram Boxes (Architecture / UI)
+   ============================================ */
+.fc-diagram-box {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 32px;
+    transition: var(--transition);
+}
+
+.fc-diagram-box:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.fc-diagram-box h3 {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: var(--fc-purple);
+}
+
+.fc-diagram-box ul {
+    list-style: none;
+}
+
+.fc-diagram-box ul li {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    line-height: 1.5;
+}
+
+.fc-diagram-box ul li:last-child {
+    border-bottom: none;
+}
+
+/* ============================================
+   Architecture Section â€” Interactive Canvas
+   ============================================ */
+.fc-arch-block {
+    margin-top: 34px;
+}
+
+.fc-arch-eyebrow {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    color: var(--fc-purple);
+    margin-bottom: 14px;
+}
+
+.fc-arch-heading {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.25;
+    margin-bottom: 14px;
+}
+
+.fc-arch-lead {
+    font-size: 1.02rem;
+    color: var(--text-secondary);
+    max-width: 720px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* --- Canvas viewport --- */
+.fc-arch-canvas {
+    position: relative;
+}
+
+.fc-arch-viewport {
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+    border: 1px solid #ece4d3;
+    border-radius: 20px;
+    background-color: #f8f4ec;
+    background-image: radial-gradient(circle, rgba(124, 92, 191, 0.07) 1px, transparent 1px);
+    background-size: 36px 36px;
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.fc-arch-viewport.is-dragging {
+    cursor: grabbing;
+}
+
+.fc-arch-stage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: 0 0;
+    will-change: transform;
+}
+
+.fc-arch-edges {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: visible;
+    pointer-events: none;
+}
+
+.fc-arch-edge {
+    fill: none;
+    stroke-width: 1;
+    opacity: 0.55;
+    stroke-linecap: round;
+    vector-effect: non-scaling-stroke;
+    transition: opacity 0.2s ease;
+}
+
+.fc-arch-edge--creator { stroke: #cdbfa6; }
+.fc-arch-edge--crew { stroke: #c4c2bd; }
+.fc-arch-edge--shared { stroke: #a489d8; opacity: 0.7; }
+.fc-arch-edge--converge { stroke: #7c5cbf; opacity: 0.85; stroke-width: 1.25; }
+.fc-arch-edge.is-active { opacity: 1; }
+.fc-arch-edge.is-dim { opacity: 0.12; }
+
+/* --- Zone + flow labels --- */
+.fc-arch-zonetag,
+.fc-arch-flow {
+    position: absolute;
+    pointer-events: none;
+}
+
+.fc-arch-zonetag {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #b1a795;
+}
+
+.fc-arch-flow-title {
+    display: block;
+    font-size: 0.64rem;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: #a39a88;
+}
+
+.fc-arch-flow[data-flow="creator"] .fc-arch-flow-title { color: #af9d75; }
+.fc-arch-flow[data-flow="crew"] .fc-arch-flow-title { color: #8f948d; }
+.fc-arch-flow[data-flow="shared"] .fc-arch-flow-title { color: #8f76c9; }
+.fc-arch-flow[data-flow="workspace"] .fc-arch-flow-title { color: #7d63b8; }
+
+.fc-arch-flow-quote {
+    display: block;
+    margin-top: 7px;
+    font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #7d7463;
+}
+
+/* --- Nodes --- */
+.fc-arch-node {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border-radius: 999px;
+    background: var(--n-bg, #fffdf7);
+    border: 1px solid var(--n-border, #e4dccb);
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #3d382e;
+    white-space: nowrap;
+    cursor: default;
+    outline: none;
+    transition: transform 0.25s ease, opacity 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.fc-arch-node .fc-arch-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--n-dot, #b9a17b);
+    flex: 0 0 auto;
+}
+
+.fc-arch-node--creator { --n-dot: #b9a17b; --n-border: #e3dbc9; --n-bg: #fffdf7; }
+.fc-arch-node--crew { --n-dot: #8f948d; --n-border: #dfddd6; --n-bg: #fffefc; }
+.fc-arch-node--shared { --n-dot: #7c5cbf; --n-border: #cdbff0; --n-bg: #f8f4fd; }
+.fc-arch-node--workspace { --n-dot: #5b3d99; --n-border: #d8cdf0; --n-bg: #f6f2fb; }
+
+.fc-arch-node--lv1 {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    border-width: 1.5px;
+    border-radius: 14px;
+}
+
+.fc-arch-node--stacked {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    border-radius: 18px;
+    padding: 14px 24px;
+}
+
+.fc-arch-node--stacked .fc-arch-node-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.fc-arch-node-sub {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #8f8674;
+}
+
+.fc-arch-node:hover,
+.fc-arch-node:focus-visible {
+    transform: scale(1.05);
+    border-color: #7c5cbf;
+    background: #fdfbff;
+}
+
+.fc-arch-node.is-dim { opacity: 0.35; }
+
+/* --- Interaction chrome --- */
+.fc-arch-hint {
+    position: absolute;
+    left: 16px;
+    bottom: 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    color: #9a917f;
+    pointer-events: none;
+}
+
+.fc-arch-zoom {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.fc-arch-zoom button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid #e3dbc9;
+    background: #fffdf7;
+    color: #6f6756;
+    font-size: 1rem;
+    font-family: inherit;
+    line-height: 1;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.fc-arch-zoom button:hover { background: #f4eefc; border-color: #c9b8ef; color: var(--fc-purple); }
+.fc-arch-zoom button:focus { outline: 2px solid rgba(124, 92, 191, 0.35); outline-offset: 2px; }
+
+.fc-arch-tip {
+    position: absolute;
+    z-index: 6;
+    max-width: 240px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: #fffdf8;
+    border: 1px solid #e7dfce;
+    box-shadow: 0 10px 30px rgba(90, 70, 40, 0.1);
+    font-size: 0.78rem;
+    line-height: 1.5;
+    color: #5b5446;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s ease;
+}
+
+.fc-arch-tip.is-open { opacity: 1; }
+
+/* --- Outro --- */
+.fc-arch-outro {
+    margin-top: 34px;
+    padding-top: 26px;
+    border-top: 1px solid #ece4d3;
+    max-width: 720px;
+}
+
+.fc-arch-outro p {
+    font-size: 1.06rem;
+    line-height: 1.8;
+    color: #38342b;
+}
+
+.fc-arch-accent {
+    color: var(--fc-purple);
+}
+
+/* --- Static (tablet / mobile) mapping --- */
+.fc-arch-static {
+    border: 1px solid #ece4d3;
+    border-radius: 20px;
+    background: #fbf8f2;
+    padding: 30px;
+}
+
+.fc-arch-static-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 34px 44px;
+}
+
+.fc-arch-static-meet {
+    grid-column: 1 / -1;
+    margin-top: 4px;
+}
+
+.fc-arch-static-head {
+    margin-bottom: 20px;
+}
+
+.fc-arch-static-title {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+}
+
+.fc-arch-static-head[data-flow="creator"] .fc-arch-static-title { color: #a99873; }
+.fc-arch-static-head[data-flow="crew"] .fc-arch-static-title { color: #838783; }
+.fc-arch-static-head[data-flow="shared"] .fc-arch-static-title { color: var(--fc-purple); }
+
+.fc-arch-static-quote {
+    display: block;
+    margin-top: 8px;
+    font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #7d7463;
+}
+
+.fc-arch-static-steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.fc-arch-static-step {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: var(--s-bg, #fffdf7);
+    border: 1px solid var(--s-border, #e4dccb);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #3d382e;
+}
+
+.fc-arch-static-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 22px;
+    top: 100%;
+    width: 1px;
+    height: 16px;
+    background: var(--s-line, #e0d8c4);
+}
+
+.fc-arch-static-step .fc-arch-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--s-dot, #b9a17b);
+    flex: 0 0 auto;
+}
+
+.fc-arch-static-steps[data-flow="creator"] .fc-arch-static-step {
+    --s-bg: #fffdf7; --s-border: #e6decb; --s-line: #e0d7c2; --s-dot: #b9a17b;
+}
+
+.fc-arch-static-steps[data-flow="crew"] .fc-arch-static-step {
+    --s-bg: #fffefc; --s-border: #e0ded7; --s-line: #dcdad3; --s-dot: #8f948d;
+}
+
+.fc-arch-static-steps[data-flow="shared"] .fc-arch-static-step {
+    --s-bg: #f8f4fd; --s-border: #d3c6ef; --s-line: #cdbff0; --s-dot: #7c5cbf;
+}
+
+.fc-arch-static-step--total {
+    border-radius: 18px;
+    padding: 16px 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.fc-arch-static-step--total .fc-arch-step-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.fc-arch-static-step-sub {
+    font-size: 0.78rem;
+    color: #8b8271;
+}
+
+.fc-arch-static-note {
+    margin-top: 26px;
+    font-size: 0.78rem;
+    color: #948b78;
+    letter-spacing: 0.02em;
+}
+
+/* ============================================
+   Core Loop (Parallel Flows)
+   ============================================ */
+.fc-loop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.fc-loop-col {
+    position: relative;
+}
+
+.fc-loop-question {
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--fc-purple);
+    margin-bottom: 30px;
+    padding-left: 16px;
+    border-left: 3px solid var(--fc-purple);
+    line-height: 1.5;
+}
+
+.fc-loop-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.fc-loop-step {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 0;
+}
+
+.fc-loop-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--fc-purple);
+    flex-shrink: 0;
+    position: relative;
+}
+
+.fc-loop-step::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 34px;
+    width: 2px;
+    height: calc(100% - 14px);
+    background-color: var(--fc-purple-muted);
+}
+
+.fc-loop-step:last-child::before {
+    display: none;
+}
+
+.fc-loop-step-text {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.fc-loop-converge {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: var(--fc-purple-light);
+    border-radius: 12px;
+}
+
+.fc-loop-converge p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--fc-purple-dark);
+}
+
+/* ============================================
+   Insight Sections
+   ============================================ */
+.fc-insight {
+    margin-bottom: 100px;
+}
+
+.fc-insight-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--fc-purple);
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.fc-insight h3 {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.fc-insight-body {
+    max-width: 680px;
+}
+
+.fc-insight-body p {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.fc-insight-highlight {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 24px;
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.5;
+}
+
+/* ============================================
+   Info Grid (for Crew profile details, etc.)
+   ============================================ */
+.fc-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.fc-info-item {
+    background-color: var(--fc-purple-light);
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--fc-purple-dark);
+    text-align: center;
+}
+
+/* ============================================
+   Transition Diagram
+   ============================================ */
+.fc-transition {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fc-transition-block {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px 32px;
+    text-align: center;
+    min-width: 160px;
+}
+
+.fc-transition-block h4 {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.fc-transition-block p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.fc-transition-arrow {
+    font-size: 1.5rem;
+    color: var(--fc-purple);
+    flex-shrink: 0;
+}
+
+/* ============================================
+   Workspace Architecture
+   ============================================ */
+.fc-workspace {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 40px;
+}
+
+.fc-workspace-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.fc-workspace-header h3 {
+    font-size: 1.1rem;
+}
+
+.fc-workspace-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.fc-workspace-item {
+    background-color: var(--fc-purple-light);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--fc-purple-dark);
+    transition: var(--transition);
+}
+
+.fc-workspace-item:hover {
+    background-color: var(--fc-purple);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   Branching Diagram
+   ============================================ */
+.fc-branch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin: 40px 0;
+}
+
+.fc-branch-start {
+    background-color: var(--fc-purple);
+    color: white;
+    border-radius: 12px;
+    padding: 14px 32px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.fc-branch-arrow {
+    color: var(--fc-purple);
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
+
+.fc-branch-paths {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.fc-branch-path {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.fc-branch-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.fc-branch-label--approve {
+    color: #2d8a4e;
+}
+
+.fc-branch-label--revise {
+    color: var(--fc-purple);
+}
+
+.fc-branch-steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.fc-branch-step {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    width: 100%;
+    text-align: center;
+}
+
+.fc-branch-step--approve {
+    border-color: #c5e8d1;
+    background-color: #f0faf3;
+}
+
+.fc-branch-step--revise {
+    border-color: rgba(124, 92, 191, 0.3);
+    background-color: var(--fc-purple-light);
+}
+
+/* ============================================
+   State Flow (Unhappy Path)
+   ============================================ */
+.fc-state-flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.fc-state {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.85);
+    white-space: nowrap;
+}
+
+.fc-state-arrow {
+    color: var(--fc-purple);
+    font-size: 0.8rem;
+    padding: 0 4px;
+    opacity: 0.5;
+}
+
+.fc-alt-states {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+    justify-content: center;
+}
+
+.fc-alt-state {
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.fc-edge-list {
+    list-style: none;
+    margin: 30px 0;
+    padding: 0;
+}
+
+.fc-edge-list li {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.75);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-left: 20px;
+    position: relative;
+}
+
+.fc-edge-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 18px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--fc-purple);
+}
+
+/* ============================================
+   Design System Grid
+   ============================================ */
+.fc-ds-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 30px 0;
+}
+
+.fc-ds-item {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px 20px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.fc-ds-item:hover {
+    border-color: var(--fc-purple);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(124, 92, 191, 0.1);
+}
+
+.fc-ds-item p {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.fc-ds-principle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--fc-purple);
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* ============================================
+   Approach Timeline
+   ============================================ */
+.fc-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 40px;
+    position: relative;
+}
+
+.fc-timeline::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 28px;
+    bottom: 28px;
+    width: 2px;
+    background-color: var(--border-color);
+}
+
+.fc-timeline-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+    padding: 24px 0;
+    position: relative;
+}
+
+.fc-timeline-num {
+    width: 56px;
+    height: 56px;
+    background-color: var(--fc-purple-light);
+    border: 2px solid var(--fc-purple);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--fc-purple);
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.fc-timeline-content h4 {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+    color: var(--text-primary);
+}
+
+.fc-timeline-content p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ============================================
+   Learn Cards
+   ============================================ */
+.fc-learn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.fc-learn-card {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 36px 32px;
+    transition: var(--transition);
+}
+
+.fc-learn-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.fc-learn-card .fc-learn-num {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--fc-purple-muted);
+    font-family: 'Outfit', sans-serif;
+    margin-bottom: 12px;
+}
+
+.fc-learn-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.fc-learn-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ============================================
+   Future List
+   ============================================ */
+.fc-future-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.fc-future-item {
+    background-color: var(--fc-purple-light);
+    border-radius: 10px;
+    padding: 14px 20px;
+    font-size: 0.9rem;
+    color: var(--fc-purple-dark);
+    font-weight: 500;
+}
+
+/* ============================================
+   Takeaway Section
+   ============================================ */
+.fc-takeaway {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 80px 60px;
+    border-radius: 24px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.fc-takeaway p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 640px;
+    margin: 0 auto 30px;
+    line-height: 1.7;
+}
+
+.fc-takeaway .fc-statement {
+    color: white;
+}
+
+.fc-takeaway .fc-callout p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ============================================
+   Next Project
+   ============================================ */
+.fc-next-project {
+    text-align: center;
+    padding: 80px 0;
+    margin-top: 40px;
+}
+
+.fc-next-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    display: block;
+}
+
+.fc-next-title {
+    font-size: 2rem;
+    color: var(--text-primary);
+}
+
+.fc-next-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition);
+    border-bottom: 2px solid var(--fc-purple);
+    padding-bottom: 4px;
+}
+
+.fc-next-title a:hover {
+    color: var(--fc-purple);
+}
+
+/* ============================================
+   Two-Col Editorial
+   ============================================ */
+.fc-editorial-img {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.fc-editorial-img .fc-placeholder {
+    border: none;
+    border-radius: 0;
+}
+
+/* ============================================
+   Lifecycle Flow
+   ============================================ */
+.fc-lifecycle {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.fc-lifecycle-step {
+    background-color: var(--fc-purple-light);
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--fc-purple-dark);
+    white-space: nowrap;
+}
+
+.fc-lifecycle-arrow {
+    color: var(--fc-purple);
+    padding: 0 6px;
+    font-size: 0.85rem;
+    opacity: 0.5;
+}
+
+/* ============================================
+   Role Comparison
+   ============================================ */
+.fc-role-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.fc-role-compare-item {
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+}
+
+.fc-role-compare-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: var(--fc-purple);
+}
+
+.fc-role-compare-item p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ============================================
+   Section Wrapper (used for dark sections)
+   ============================================ */
+.fc-dark {
+    background-color: #1a1a1a;
+    color: white;
+    margin-left: -60px;
+    margin-right: -60px;
+    padding: 80px 60px;
+    margin-bottom: 100px;
+}
+
+.fc-dark h2 {
+    color: white;
+}
+
+.fc-dark .section-label {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.fc-dark .section-text {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* ============================================
+   Responsive â€” Tablet (< 1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+    .fc-hero {
+        padding: 60px 40px;
+    }
+
+    .fc-hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .fc-hero-statement {
+        font-size: 1.3rem;
+    }
+
+    .fc-two-col {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .fc-role-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fc-arch-static {
+        padding: 24px;
+    }
+
+    .fc-loop {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .fc-workspace-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fc-ds-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fc-learn-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fc-future-list {
+        grid-template-columns: 1fr;
+    }
+
+    .fc-role-compare {
+        grid-template-columns: 1fr;
+    }
+
+    .fc-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fc-branch-paths {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .fc-dark {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 60px 40px;
+    }
+}
+
+/* ============================================
+   Responsive â€” Mobile (< 640px)
+   ============================================ */
+@media (max-width: 640px) {
+    .fc-hero {
+        padding: 50px 28px;
+    }
+
+    .fc-hero h1 {
+        font-size: 2.8rem;
+        letter-spacing: -1px;
+    }
+
+    .fc-hero-statement {
+        font-size: 1.15rem;
+    }
+
+    .fc-hero-desc {
+        font-size: 0.9rem;
+    }
+
+    .fc-section-number {
+        font-size: 3rem;
+    }
+
+    .fc-statement {
+        font-size: 1.2rem;
+    }
+
+    .fc-statement--large {
+        font-size: 1.5rem;
+    }
+
+    .fc-insight h3 {
+        font-size: 1.4rem;
+    }
+
+    .fc-flow {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fc-flow-arrow {
+        transform: rotate(90deg);
+        padding: 4px 0;
+    }
+
+    .fc-flow-step {
+        width: 100%;
+        text-align: center;
+    }
+
+    .fc-lifecycle {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fc-lifecycle-arrow {
+        transform: rotate(90deg);
+        padding: 4px 0;
+    }
+
+    .fc-transition {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fc-transition-arrow {
+        transform: rotate(90deg);
+    }
+
+    .fc-timeline-step {
+        gap: 16px;
+    }
+
+    .fc-timeline-num {
+        width: 44px;
+        height: 44px;
+        font-size: 0.8rem;
+    }
+
+    .fc-timeline::before {
+        left: 21px;
+    }
+
+    .fc-workspace {
+        padding: 24px;
+    }
+
+    .fc-workspace-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fc-ds-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fc-dark-section,
+    .fc-takeaway {
+        padding: 50px 28px;
+    }
+
+    .fc-dark {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 50px 28px;
+    }
+
+    .fc-role-end {
+        font-size: 1.1rem;
+    }
+
+    .fc-callout {
+        padding: 24px 20px;
+    }
+
+    .fc-callout p {
+        font-size: 1rem;
+    }
+
+    .fc-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fc-arch-static-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .fc-arch-static {
+        padding: 20px 16px;
+    }
+
+    .fc-arch-heading {
+        font-size: 1.45rem;
+    }
+}
+
+/* ============================================
+   Reduced Motion
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+/* ============================================
+   Scroll Reveal Animation
+   ============================================ */
+.fc-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fc-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fc-reveal-delay-1 { transition-delay: 0.1s; }
+.fc-reveal-delay-2 { transition-delay: 0.2s; }
+.fc-reveal-delay-3 { transition-delay: 0.3s; }
+.fc-reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ============================================
+   Utility
+   ============================================ */
+.fc-mb-sm { margin-bottom: 20px; }
+.fc-mb-md { margin-bottom: 40px; }
+.fc-mb-lg { margin-bottom: 60px; }
+.fc-mb-xl { margin-bottom: 100px; }
+.fc-mt-md { margin-top: 40px; }
+.fc-mt-lg { margin-top: 60px; }
+.fc-text-center { text-align: center; }
+.fc-text-purple { color: var(--fc-purple); }
+.fc-text-muted { color: var(--text-secondary); }
+/* FanCrew meta overrides are scoped to .fc-page (see top of file) */
