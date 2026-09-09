@@ -1,2 +1,16 @@
 /* Lingofable Specific Overrides */
-/* This file is currently empty but reserved for project-specific styles */
+
+.interaction-images {
+    flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+    .interaction-images {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .interaction-images img {
+        width: 100% !important;
+    }
+}

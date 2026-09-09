@@ -27,6 +27,7 @@ body {
     line-height: 1.6;
     display: flex;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -249,6 +250,21 @@ h1, h2, h3, h4 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* Mobile nav toggle */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
 .content-container {
     max-width: var(--container-max-width);
     margin: 40px auto;
@@ -328,6 +344,72 @@ h1, h2, h3, h4 {
         margin-top: 40px;
         flex-wrap: wrap;
         gap: 40px;
+    }
+}
+
+@media (max-width: 640px) {
+    .top-nav {
+        padding: 0 16px;
+        gap: 10px;
+        position: relative;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+    }
+
+    .btn-hide-mobile {
+        display: none;
+    }
+
+    .top-nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background-color: var(--bg-color);
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+        padding: 10px 16px;
+        display: none;
+    }
+
+    .top-nav-links.open {
+        display: flex;
+    }
+
+    .top-nav-links .top-nav-link {
+        padding: 14px 8px;
+        border-bottom: 1px solid var(--border-color);
+        font-size: 0.95rem;
+    }
+
+    .top-nav-links .top-nav-link:last-child {
+        border-bottom: none;
+    }
+
+    .top-nav-link {
+        font-size: 0.8rem;
+    }
+
+    .content-container {
+        padding: 0 16px;
+        margin: 24px auto;
+    }
+
+    .footer {
+        padding: 50px 24px;
+    }
+
+    .footer-left h2 {
+        font-size: 1.8rem;
+    }
+
+    .footer-links {
+        gap: 32px;
+        flex-direction: column;
     }
 }
 
@@ -456,4 +538,29 @@ h1, h2, h3, h4 {
 
 .modal-google-icon {
     width: 24px;
+}
+
+@media (max-width: 640px) {
+    .profile-card-modal {
+        aspect-ratio: auto;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .modal-content {
+        padding: 40px 24px;
+    }
+
+    .modal-name {
+        font-size: 1.6rem;
+    }
+
+    .modal-profile-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .modal-about {
+        max-width: 100%;
+    }
 }

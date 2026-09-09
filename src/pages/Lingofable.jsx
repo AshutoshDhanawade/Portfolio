@@ -146,7 +146,7 @@ export default function Lingofable() {
                         We developed interactive tutorials that guide users through the core mechanics of the app,
                         ensuring they understand how to use the immersive reading tools effectively.
                     </p>
-                    <div style={{ display: 'flex', gap: '20px', marginTop: '20px' }}>
+                    <div className="interaction-images" style={{ display: 'flex', gap: '20px', marginTop: '20px' }}>
                         <img
                             src="/projects/lingofable/assets/onboarding-words.png"
                             alt="Interaction 1"

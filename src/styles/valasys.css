@@ -83,3 +83,44 @@
 .feature-card.halloween-result .feature-desc {
     color: rgba(255,255,255,0.8);
 }
+
+/* --- Responsive: Valasys --- */
+@media (max-width: 1024px) {
+    .halloween-hero {
+        min-height: 320px;
+    }
+
+    .halloween-hero h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .halloween-hero {
+        min-height: 260px;
+        padding: 24px;
+    }
+
+    .halloween-hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .halloween-hero p {
+        font-size: 1rem;
+    }
+
+    .halloween-hero .emoji {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .project-title {
+        font-size: 1.5rem;
+    }
+
+    /* Override inline grid templates used in JSX so sections stack on mobile */
+    .features-container[style*="repeat(3, 1fr)"] {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+}
