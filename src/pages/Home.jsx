@@ -21,46 +21,9 @@ export default function Home() {
 
                 <div className="content-container">
                     <div className="project-grid">
-                        {/* Lingofable Project Card */}
-                        <Link to="/projects/lingofable" className="project-card">
-                            <span className="project-card-num">No. 01</span>
-                            <div className="project-card-image-wrapper">
-                                <img src="/assets/images/hero-banner.png" alt="Lingofable" className="project-card-image" />
-                                <div className="view-case-study">
-                                    <i className="fas fa-eye"></i> VIEW CASE STUDY
-                                </div>
-                            </div>
-                            <div className="project-card-header">
-                                <h3 className="project-card-title">Lingofable</h3>
-                                <div className="project-card-tags">
-                                    <span className="project-card-tag">Side Project</span>
-                                    <span className="project-card-tag">Shipped</span>
-                                </div>
-                            </div>
-                            <p className="project-card-desc">
-                                A mobile app focused on language learning through stories with ~200 users. Featured on
-                                Cornell's Speaking of Language Podcast.
-                            </p>
-                            <div className="project-card-divider"></div>
-                            <div className="project-card-meta">
-                                <div className="project-meta-col">
-                                    <h4>Role</h4>
-                                    <p>Co-Founder, Design, Dev, Marketing</p>
-                                </div>
-                                <div className="project-meta-col">
-                                    <h4>Team</h4>
-                                    <p>with Simon Ilincev</p>
-                                </div>
-                                <div className="project-meta-col">
-                                    <h4>Timeframe</h4>
-                                    <p>Oct 2023 - present</p>
-                                </div>
-                            </div>
-                        </Link>
-
                         {/* Valasys Project Card */}
                         <Link to="/projects/valasys" className="project-card">
-                            <span className="project-card-num">No. 02</span>
+                            <span className="project-card-num">No. 01</span>
                             <div className="project-card-image-wrapper">
                                 <img
                                     src="/assets/images/hero-banner.png"
@@ -96,6 +59,48 @@ export default function Home() {
                                 <div className="project-meta-col">
                                     <h4>Timeframe</h4>
                                     <p>Oct 2025 (3 weeks)</p>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Valasys Product Website Card */}
+                        <Link to="/projects/valasys-product-website" className="project-card">
+                            <span className="project-card-num">No. 02</span>
+                            <div className="project-card-image-wrapper">
+                                <img
+                                    src="/assets/images/hero-banner.png"
+                                    alt="Valasys Product Website"
+                                    className="project-card-image"
+                                    style={{ filter: 'hue-rotate(160deg) brightness(0.7)' }}
+                                />
+                                <div className="view-case-study">
+                                    <i className="fas fa-eye"></i> VIEW CASE STUDY
+                                </div>
+                            </div>
+                            <div className="project-card-header">
+                                <h3 className="project-card-title">Valasys Product Website</h3>
+                                <div className="project-card-tags">
+                                    <span className="project-card-tag">B2B SaaS</span>
+                                    <span className="project-card-tag">Interaction Design</span>
+                                </div>
+                            </div>
+                            <p className="project-card-desc">
+                                Making a complex B2B sales-intelligence product easier to explore through
+                                interaction design, progressive disclosure, and modern web design.
+                            </p>
+                            <div className="project-card-divider"></div>
+                            <div className="project-card-meta">
+                                <div className="project-meta-col">
+                                    <h4>Role</h4>
+                                    <p>UI/UX Designer, Interaction Designer</p>
+                                </div>
+                                <div className="project-meta-col">
+                                    <h4>Scope</h4>
+                                    <p>Full Design & Prototype</p>
+                                </div>
+                                <div className="project-meta-col">
+                                    <h4>Domain</h4>
+                                    <p>B2B SaaS, Sales Intelligence</p>
                                 </div>
                             </div>
                         </Link>

@@ -65,10 +65,9 @@ export default function HomeSidebar() {
             <div className="explore-footer">
                 <h4>Find me at</h4>
                 <div className="explore-footer-links">
-                    <a href="#">Email</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">GitHub</a>
-                    <a href="#">X</a>
+                    <a href="mailto:ajdhanawade2001@gmail.com">Email</a>
+                    <a href="https://www.linkedin.com/in/ashutosh-dhanawade-574258210/" target="_blank">LinkedIn</a>
+
                 </div>
 
                 <div className="explore-status">

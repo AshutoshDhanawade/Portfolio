@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 export function useRevealObserver() {
     useEffect(() => {
-        const els = Array.from(document.querySelectorAll('.fc-reveal'));
+        const els = Array.from(document.querySelectorAll('.fc-reveal, .vpw-reveal'));
         if (els.length === 0) return;
 
         const observer = new IntersectionObserver(

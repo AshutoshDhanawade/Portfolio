@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import FanCrew from './pages/FanCrew';
 import Lingofable from './pages/Lingofable';
 import Valasys from './pages/Valasys';
+import ValasysProductWebsite from './pages/ValasysProductWebsite';
 
 function ScrollToTop() {
     const { pathname } = useLocation();
@@ -23,6 +24,7 @@ export default function App() {
                 <Route path="/projects/fancrew" element={<FanCrew />} />
                 <Route path="/projects/lingofable" element={<Lingofable />} />
                 <Route path="/projects/valasys" element={<Valasys />} />
+                <Route path="/projects/valasys-product-website" element={<ValasysProductWebsite />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
         </>

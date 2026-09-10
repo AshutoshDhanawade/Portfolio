@@ -1,0 +1,1097 @@
+/* ============================================
+   Valasys Product Website — From Scratch
+   ============================================ */
+
+/* ---- Accent System ---- */
+:root {
+    --vpw-teal: #0d7377;
+    --vpw-teal-light: #e8f5f5;
+    --vpw-teal-dark: #095456;
+    --vpw-teal-muted: rgba(13, 115, 119, 0.12);
+    --vpw-teal-glow: rgba(13, 115, 119, 0.25);
+}
+
+/* Scope meta grid */
+.vpw-page .meta-item {
+    background-color: #0f8185 !important;
+}
+
+.vpw-page .project-meta-grid {
+    border-color: #0d7377 !important;
+}
+
+/* ---- Scroll Reveal ---- */
+.vpw-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vpw-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.vpw-hero {
+    background: linear-gradient(160deg, #031f1e 0%, #074342 35%, #0d7377 100%);
+    border-radius: 24px;
+    padding: 100px 64px 80px;
+    color: white;
+    margin-bottom: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.vpw-hero::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -8%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.vpw-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: 20%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.vpw-hero-eyebrow {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0.6;
+    margin-bottom: 28px;
+    font-weight: 500;
+}
+
+.vpw-hero h1 {
+    font-size: clamp(2.8rem, 5vw, 5.5rem);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 28px;
+    letter-spacing: -2.5px;
+}
+
+.vpw-hero-statement {
+    font-size: clamp(1.15rem, 2vw, 1.65rem);
+    font-weight: 400;
+    max-width: 620px;
+    line-height: 1.5;
+    opacity: 0.85;
+    margin-bottom: 48px;
+}
+
+.vpw-hero-meta {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.vpw-hero-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.vpw-hero-meta-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.5;
+    font-weight: 600;
+}
+
+.vpw-hero-meta-value {
+    font-size: 0.92rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* ============================================
+   FULL BLEED
+   ============================================ */
+.vpw-full-bleed {
+    margin-left: calc(-1 * var(--sidebar-width) - 40px + 40px);
+    margin-right: calc(-1 * var(--sidebar-width) - 40px + 40px);
+    padding: 0;
+}
+
+.vpw-full-bleed-inside {
+    display: flex;
+    align-items: stretch;
+}
+
+/* ============================================
+   PLACEHOLDERS
+   ============================================ */
+.vpw-placeholder {
+    background-color: #f5f1ea;
+    border: 2px dashed var(--border-color);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: border-color 0.3s ease, color 0.3s ease;
+    overflow: hidden;
+}
+
+.vpw-placeholder:hover {
+    border-color: var(--vpw-teal);
+}
+
+.vpw-placeholder-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: #aaa;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    line-height: 1.5;
+}
+
+.vpw-placeholder-icon {
+    font-size: 1.8rem;
+    opacity: 0.4;
+    line-height: 1;
+}
+
+.vpw-placeholder:hover .vpw-placeholder-inner {
+    color: var(--vpw-teal);
+}
+
+.vpw-placeholder--hero {
+    min-height: 520px;
+    border-radius: 0 0 24px 24px;
+    border-top: none;
+}
+
+.vpw-placeholder--wide {
+    width: 100%;
+    min-height: 380px;
+}
+
+.vpw-placeholder--wide-tall {
+    width: 100%;
+    min-height: 500px;
+}
+
+.vpw-placeholder--portrait {
+    min-height: 420px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.vpw-placeholder--screenshot {
+    min-height: 380px;
+    width: 100%;
+}
+
+.vpw-placeholder--screenshot-sm {
+    min-height: 180px;
+    width: 100%;
+}
+
+.vpw-placeholder--thumb {
+    min-height: 100px;
+    border-radius: 12px;
+}
+
+.vpw-placeholder--walkthrough {
+    min-height: 260px;
+    width: 100%;
+}
+
+/* ============================================
+   EDITORIAL / STATEMENT
+   ============================================ */
+.vpw-editorial {
+    max-width: 800px;
+    margin-bottom: 48px;
+}
+
+.vpw-statement--large {
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+}
+
+/* ============================================
+   TWO-COLUMN
+   ============================================ */
+.vpw-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.vpw-two-col--wide-first {
+    grid-template-columns: 1.2fr 1fr;
+}
+
+.vpw-mt-lg {
+    margin-top: 60px;
+}
+
+/* ============================================
+   CHALLENGE
+   ============================================ */
+.vpw-challenge-text {
+    padding-top: 8px;
+}
+
+.vpw-challenge-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.vpw-pill {
+    background: var(--vpw-teal-light);
+    color: var(--vpw-teal-dark);
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* ============================================
+   JOURNEY (Understanding the Product)
+   ============================================ */
+.vpw-journey {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    justify-content: center;
+    margin: 48px 0;
+    flex-wrap: wrap;
+}
+
+.vpw-journey-step {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+    min-width: 155px;
+    max-width: 180px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.vpw-journey-step:hover {
+    border-color: var(--vpw-teal);
+    transform: translateY(-4px);
+}
+
+.vpw-journey-step--active {
+    background: var(--vpw-teal-light);
+    border-color: var(--vpw-teal);
+}
+
+.vpw-journey-num {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--vpw-teal);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.vpw-journey-step h4 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.vpw-journey-step p {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.vpw-journey-arrow {
+    display: flex;
+    align-items: center;
+    padding: 0 6px;
+    font-size: 0.85rem;
+    color: var(--vpw-teal);
+    opacity: 0.4;
+    padding-top: 36px;
+}
+
+/* ============================================
+   PROCESS (Horizontal Cards)
+   ============================================ */
+.vpw-process {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    margin: 48px 0;
+}
+
+.vpw-process-card {
+    position: relative;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vpw-process-card:hover {
+    border-color: var(--vpw-teal);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+}
+
+.vpw-process-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.vpw-process-num {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--vpw-teal-muted);
+    font-family: 'Outfit', sans-serif;
+    line-height: 1;
+}
+
+.vpw-process-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border-color);
+    margin-left: 12px;
+}
+
+.vpw-process-card h4 {
+    font-size: 0.92rem;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.vpw-process-card p {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 16px;
+    flex: 1;
+}
+
+/* ============================================
+   DESIGN DIRECTION
+   ============================================ */
+.vpw-direction-row {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.vpw-direction-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.vpw-direction-caption {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    margin-top: 12px;
+    font-weight: 500;
+}
+
+.vpw-direction-caption--block {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+/* ============================================
+   INTERACTION SECTION
+   ============================================ */
+.vpw-interaction {
+    margin-top: 80px;
+    margin-bottom: 24px;
+}
+
+.vpw-interaction-header {
+    margin-bottom: 40px;
+}
+
+.vpw-interaction-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--vpw-teal);
+    font-weight: 700;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.vpw-interaction-title {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.vpw-interaction-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+}
+
+.vpw-interaction-body--reversed {
+    direction: rtl;
+}
+
+.vpw-interaction-body--reversed>* {
+    direction: ltr;
+}
+
+/* Interaction Visual */
+.vpw-interaction-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Interaction Text Blocks */
+.vpw-interaction-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.vpw-interaction-block-item {
+    padding: 22px 26px;
+    border-radius: 14px;
+    background: #fafafa;
+    border: 1px solid var(--border-color);
+}
+
+.vpw-interaction-block-item--decision {
+    background: #f8f6fd;
+    border-color: rgba(124, 92, 191, 0.15);
+}
+
+.vpw-interaction-block-item--purpose {
+    background: #fdf8ee;
+    border-color: rgba(184, 134, 11, 0.12);
+}
+
+.vpw-interaction-tag {
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: var(--vpw-teal);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.vpw-interaction-tag--decision {
+    color: #7c5cbf;
+}
+
+.vpw-interaction-tag--purpose {
+    color: #b8860b;
+}
+
+.vpw-interaction-block-item p {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ============================================
+   GLOW CARD DEMO
+   ============================================ */
+.vpw-glow-demos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 48px 24px;
+}
+
+.vpw-glow-card {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    padding: 36px 30px;
+    background: #fff;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.vpw-glow-card-border {
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    border: 1.5px solid var(--border-color);
+    pointer-events: none;
+    transition: border-color 0.35s ease;
+}
+
+.vpw-glow-card::before {
+    content: '';
+    position: absolute;
+    inset: -1.5px;
+    border-radius: 20px;
+    background: conic-gradient(from var(--glow-angle, 0deg),
+            transparent 0%,
+            var(--vpw-teal-glow) 8%,
+            transparent 16%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.vpw-glow-card:hover::before,
+.vpw-glow-card:focus-visible::before {
+    opacity: 1;
+}
+
+.vpw-glow-card:hover,
+.vpw-glow-card:focus-visible {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(13, 115, 119, 0.18);
+}
+
+.vpw-glow-card:hover .vpw-glow-card-border,
+.vpw-glow-card:focus-visible .vpw-glow-card-border {
+    border-color: var(--vpw-teal);
+}
+
+.vpw-glow-card--offset {
+    max-width: 260px;
+    margin-left: 48px;
+}
+
+.vpw-glow-card-content {
+    position: relative;
+    z-index: 1;
+}
+
+.vpw-glow-card-eyebrow {
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--vpw-teal);
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.vpw-glow-card-content h4 {
+    font-size: 1.15rem;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.vpw-glow-card-content p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.vpw-demo-hint {
+    font-size: 0.72rem;
+    color: #bbb;
+    font-style: italic;
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* ============================================
+   SCROLL CARD DEMO
+   ============================================ */
+.vpw-scroll-demos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 24px;
+}
+
+.vpw-scroll-card-stack {
+    position: relative;
+    width: 280px;
+    height: 220px;
+}
+
+.vpw-scroll-card {
+    position: absolute;
+    width: 100%;
+    padding: 28px;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vpw-scroll-card--back {
+    transform: translateY(-30px) scale(0.9);
+    opacity: 0.35;
+    z-index: 1;
+}
+
+.vpw-scroll-card--mid {
+    transform: translateY(0) scale(0.95);
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.vpw-scroll-card--front {
+    transform: translateY(30px) scale(1);
+    opacity: 1;
+    z-index: 3;
+    border-color: var(--vpw-teal);
+    box-shadow: 0 12px 40px rgba(13, 115, 119, 0.15);
+}
+
+.vpw-scroll-card-tag {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--vpw-teal);
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.vpw-scroll-card h4 {
+    font-size: 1.05rem;
+    color: var(--text-primary);
+}
+
+/* ============================================
+   LOGIC DIAGRAMS
+   ============================================ */
+.vpw-logic {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.vpw-logic-row {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.vpw-logic-node {
+    background: var(--vpw-teal-light);
+    border: 1px solid rgba(13, 115, 119, 0.15);
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--vpw-teal-dark);
+    white-space: nowrap;
+    transition: background 0.3s ease;
+}
+
+.vpw-logic-node:hover {
+    background: var(--vpw-teal);
+    color: white;
+}
+
+.vpw-logic-node--end {
+    background: var(--vpw-teal);
+    color: white;
+    border-color: var(--vpw-teal);
+}
+
+.vpw-logic-connector {
+    width: 28px;
+    height: 1px;
+    background: var(--vpw-teal);
+    opacity: 0.3;
+    flex-shrink: 0;
+}
+
+/* ============================================
+   WALKTHROUGH (Final Experience)
+   ============================================ */
+.vpw-walkthrough {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.vpw-walkthrough-step {
+    display: flex;
+    flex-direction: column;
+}
+
+.vpw-walkthrough-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--vpw-teal);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.vpw-walkthrough-img {
+    width: auto;
+    height: 300px;
+    display: block;
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+}
+
+/* ============================================
+   LEARNINGS
+   ============================================ */
+.vpw-learnings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 48px;
+}
+
+.vpw-learning {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 40px 32px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vpw-learning:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.05);
+}
+
+.vpw-learning-num {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--vpw-teal-muted);
+    font-family: 'Outfit', sans-serif;
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+.vpw-learning h4 {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.vpw-learning p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+}
+
+/* ============================================
+   FINAL IMAGE
+   ============================================ */
+.vpw-final-image-wrapper {
+    margin-top: 60px;
+    border-radius: 20px;
+    overflow: hidden;
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+}
+
+.vpw-final-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ============================================
+   FINAL STATEMENT
+   ============================================ */
+.vpw-final-statement {
+    margin-top: 64px;
+    padding: 56px 60px;
+    background: linear-gradient(160deg, #031f1e 0%, #074342 35%, #0d7377 100%);
+    border-radius: 24px;
+    color: white;
+    text-align: center;
+}
+
+.vpw-final-statement p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ============================================
+   NEXT PROJECT
+   ============================================ */
+.vpw-next-project {
+    text-align: center;
+    padding: 80px 0;
+    margin-top: 20px;
+}
+
+.vpw-next-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    display: block;
+}
+
+.vpw-next-title {
+    font-size: 2rem;
+    color: var(--text-primary);
+}
+
+.vpw-next-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition);
+    border-bottom: 2px solid var(--vpw-teal);
+    padding-bottom: 4px;
+}
+
+.vpw-next-title a:hover {
+    color: var(--vpw-teal);
+}
+
+/* ============================================
+   RESPONSIVE — Tablet (< 1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+    .vpw-hero {
+        padding: 70px 40px 60px;
+    }
+
+    .vpw-full-bleed {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .vpw-two-col,
+    .vpw-two-col--wide-first {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .vpw-interaction-body,
+    .vpw-interaction-body--reversed {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        direction: ltr;
+    }
+
+    .vpw-process {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .vpw-direction-row {
+        grid-template-columns: 1fr;
+    }
+
+    .vpw-learnings {
+        grid-template-columns: 1fr;
+    }
+
+    .vpw-walkthrough {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vpw-journey {
+        gap: 8px;
+    }
+
+    .vpw-journey-step {
+        min-width: 120px;
+        padding: 20px 16px;
+    }
+
+    .vpw-glow-card--offset {
+        margin-left: 0;
+    }
+
+    .vpw-final-statement {
+        padding: 48px 32px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — Mobile (< 640px)
+   ============================================ */
+@media (max-width: 640px) {
+    .vpw-hero {
+        padding: 56px 24px 44px;
+        border-radius: 20px;
+    }
+
+    .vpw-hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .vpw-hero-meta {
+        gap: 24px;
+        flex-direction: column;
+    }
+
+    .vpw-statement--large {
+        font-size: 1.6rem;
+        letter-spacing: 0;
+    }
+
+    .vpw-process {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .vpw-process-card {
+        padding: 18px 16px;
+    }
+
+    .vpw-process-num {
+        font-size: 1.4rem;
+    }
+
+    .vpw-journey {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vpw-journey-arrow {
+        transform: rotate(90deg);
+        padding: 6px 0;
+        padding-top: 0;
+    }
+
+    .vpw-journey-step {
+        max-width: 240px;
+        width: 100%;
+    }
+
+    .vpw-walkthrough {
+        grid-template-columns: 1fr;
+    }
+
+    .vpw-walkthrough-img {
+        height: auto;
+        width: 100%;
+    }
+
+    .vpw-interaction-body {
+        gap: 32px;
+    }
+
+    .vpw-glow-card {
+        padding: 28px 24px;
+    }
+
+    .vpw-glow-card-content h4 {
+        font-size: 1rem;
+    }
+
+    .vpw-logic-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .vpw-logic-connector {
+        width: 1px;
+        height: 20px;
+    }
+
+    .vpw-scroll-card-stack {
+        width: 240px;
+        height: 200px;
+    }
+
+    .vpw-scroll-card {
+        padding: 20px;
+    }
+
+    .vpw-final-statement {
+        padding: 36px 20px;
+    }
+
+    .vpw-final-statement p {
+        font-size: 1rem;
+    }
+
+    .vpw-placeholder--hero {
+        min-height: 320px;
+    }
+
+    .vpw-placeholder--wide {
+        min-height: 260px;
+    }
+
+    .vpw-placeholder--wide-tall {
+        min-height: 340px;
+    }
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    .vpw-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .vpw-glow-card,
+    .vpw-glow-card::before,
+    .vpw-glow-card-border,
+    .vpw-scroll-card,
+    .vpw-journey-step,
+    .vpw-process-card,
+    .vpw-learning,
+    .vpw-logic-node {
+        transition: none;
+    }
+}
