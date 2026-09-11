@@ -5,16 +5,16 @@ import CaseSidebar from './CaseSidebar';
 
 export default function CaseLayout({ toc, contentClassName = '', children }) {
     return (
-        <>
+        <div className="case-study-layout">
             <ProfileModal />
             <CaseSidebar toc={toc} />
-            <div className="main-wrapper">
+            <div className="case-study-main">
                 <TopNav portfolioTo="/" />
-                <div className={'content-container' + (contentClassName ? ' ' + contentClassName : '')}>
+                <div className={'case-study-content' + (contentClassName ? ' ' + contentClassName : '')}>
                     {children}
                 </div>
                 <Footer />
             </div>
-        </>
+        </div>
     );
 }

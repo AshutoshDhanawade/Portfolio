@@ -9,7 +9,7 @@ import { usePageTitle } from '../hooks/usePageTitle';
 import '../styles/portfolio.css';
 
 export default function Home() {
-    usePageTitle('Ashutosh Dhanawade | UI UX Designer');
+    usePageTitle('Ashutosh Dhanawade - UI UX Designer');
 
     return (
         <>

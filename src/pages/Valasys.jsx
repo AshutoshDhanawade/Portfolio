@@ -17,7 +17,7 @@ const TOC = [
 ];
 
 export default function Valasys() {
-    usePageTitle('Megan Yap | Valasys Halloween Campaign');
+    usePageTitle('Ashutosh Dhanawade - UI UX Designer');
     useScrollSpy();
     useFeatureCards();
 

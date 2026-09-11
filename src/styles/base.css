@@ -271,6 +271,47 @@ h1, h2, h3, h4 {
     padding: 0 40px;
 }
 
+/* Case Study Layout */
+.case-study-layout {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+    width: 100%;
+    min-height: 100vh;
+}
+
+.case-study-main {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.case-study-main .top-nav {
+    padding-inline: clamp(32px, 4vw, 72px);
+}
+
+.case-study-content {
+    width: 100%;
+    max-width: none;
+    margin: 40px 0;
+    padding-inline: clamp(32px, 4vw, 72px);
+}
+
+.case-study-main .footer {
+    padding-left: clamp(32px, 4vw, 72px);
+    padding-right: clamp(32px, 4vw, 72px);
+}
+
+.case-sidebar {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    overflow-y: auto;
+    min-width: 0;
+}
+
 /* Footer */
 .footer {
     background: linear-gradient(135deg, #9b4d6d 0%, #7a3a52 100%);
@@ -327,11 +368,18 @@ h1, h2, h3, h4 {
     .sidebar {
         display: none;
     }
+    .case-sidebar {
+        display: flex;
+    }
     .main-wrapper {
         margin-left: 0;
     }
     .top-nav {
         padding: 0 20px;
+    }
+    .case-study-main .top-nav,
+    .case-study-content {
+        padding-inline: 32px;
     }
     .content-container {
         padding: 0 20px;
@@ -344,6 +392,26 @@ h1, h2, h3, h4 {
         margin-top: 40px;
         flex-wrap: wrap;
         gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .case-study-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .case-sidebar {
+        display: none;
+    }
+
+    .case-study-main .top-nav,
+    .case-study-content {
+        padding-inline: 28px;
+    }
+
+    .case-study-main .footer {
+        padding-left: 28px;
+        padding-right: 28px;
     }
 }
 
@@ -397,6 +465,15 @@ h1, h2, h3, h4 {
     .content-container {
         padding: 0 16px;
         margin: 24px auto;
+    }
+
+    .case-study-main .top-nav,
+    .case-study-content {
+        padding-inline: 16px;
+    }
+
+    .case-study-content {
+        margin: 24px 0;
     }
 
     .footer {

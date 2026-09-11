@@ -15,7 +15,7 @@ const TOC = [
 ];
 
 export default function Lingofable() {
-    usePageTitle('Megan Yap | Building Lingofable from 0-1');
+    usePageTitle('Ashutosh Dhanawade - UI UX Designer');
     useScrollSpy();
     useFeatureCards();
 

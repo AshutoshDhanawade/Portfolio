@@ -52,7 +52,7 @@ const PROCESS_STEPS = [
 ];
 
 export default function ValasysProductWebsite() {
-    usePageTitle('Ashutosh Dhanawade | Valasys Product Website');
+    usePageTitle('Ashutosh Dhanawade - UI UX Designer');
     useScrollSpy();
     useRevealObserver();
     useFeatureCards();

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function CaseSidebar({ toc }) {
     return (
-        <aside className="sidebar">
+        <aside className="sidebar case-sidebar">
             <Link to="/" className="home-link">
                 <i className="fas fa-arrow-left"></i> Home
             </Link>

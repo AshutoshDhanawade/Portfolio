@@ -124,7 +124,7 @@ const LEARN_CARDS = [
 ];
 
 export default function FanCrew() {
-    usePageTitle('Megan Yap | FanCrew — Creator × Crew Marketplace');
+    usePageTitle('Ashutosh Dhanawade - UI UX Designer');
     useScrollSpy();
     useRevealObserver();
     useFeatureCards();
@@ -144,8 +144,8 @@ export default function FanCrew() {
                 </p>
             </div>
 
-            <div className="fc-placeholder fc-placeholder--hero fc-reveal">
-                <span>FanCrew — Hero Mockup</span>
+            <div className="hero-image-container fc-reveal">
+                <img src="/assets/images/fancrew hero image.png" alt="FanCrew Hero Mockup" className="hero-image" />
             </div>
 
             <header className="project-header fc-mt-lg">
