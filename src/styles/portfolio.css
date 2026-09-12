@@ -515,6 +515,11 @@
         height: 220px;
     }
 
+    .project-card-header {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
     .project-card-meta {
         grid-template-columns: 1fr;
         gap: 16px;

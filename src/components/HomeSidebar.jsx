@@ -60,6 +60,28 @@ export default function HomeSidebar() {
                 >
                     UI UX DESIGNER
                 </p>
+                <div className="sidebar-experience">
+                    <h4>Experience</h4>
+                    <ul>
+                        <li>
+                            <div className="sidebar-experience-info"><strong>Graphic Design Intern</strong><span>@PlaySMC</span></div>
+                            <em>2021</em>
+                        </li>
+                        <li>
+                            <div className="sidebar-experience-info"><strong>Graphic &amp; Web Design Intern</strong><span>@Robu</span></div>
+                            <em>2022</em>
+                        </li>
+                        <li>
+                            <div className="sidebar-experience-info"><strong>Graphics Designer</strong><span>@Valasys Media</span></div>
+                            <em>2024 — Present</em>
+                        </li>
+                        <li>
+                            <div className="sidebar-experience-info"><strong>Founding</strong><span>@Dripcheck</span></div>
+                            <em>2023 — Present</em>
+                        </li>
+                    </ul>
+                    <p className="sidebar-experience-note">(AI Fashion Tech)</p>
+                </div>
                 <p style={{ fontSize: '0.9rem', color: '#666', lineHeight: 1.6 }}>
                     I am a passionate UI/UX Designer dedicated to creating user-centric digital experiences that are
                     both beautiful and functional.

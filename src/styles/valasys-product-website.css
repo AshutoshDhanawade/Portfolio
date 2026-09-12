@@ -980,6 +980,11 @@
         flex-direction: column;
     }
 
+    .vpw-full-bleed {
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+
     .vpw-statement--large {
         font-size: 1.6rem;
         letter-spacing: 0;
