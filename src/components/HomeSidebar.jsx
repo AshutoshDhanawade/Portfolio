@@ -1,7 +1,35 @@
+import { useEffect, useState } from 'react';
 import { useClock } from '../hooks/useClock';
+import { getLenis } from '../lib/lenis';
+
+function smoothScrollTo(selector, event) {
+    event.preventDefault();
+    const el = document.querySelector(selector);
+    const y = el ? Math.max(0, el.offsetTop - 70) : 0;
+    const lenis = getLenis();
+    if (lenis) {
+        lenis.scrollTo(y);
+    } else {
+        window.scrollTo(0, y);
+    }
+}
 
 export default function HomeSidebar() {
     const time = useClock();
+    const [active, setActive] = useState('about');
+
+    useEffect(() => {
+        const about = document.getElementById('about');
+        const work = document.getElementById('work');
+        const onScroll = () => {
+            const y = window.scrollY;
+            if (work && about && y >= work.offsetTop - 100) setActive('work');
+            else if (about && y >= about.offsetTop) setActive('about');
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
 
     return (
         <aside className="sidebar">
@@ -45,18 +73,13 @@ export default function HomeSidebar() {
                 <h3 className="sidebar-box-header">Explore</h3>
                 <ul className="sidebar-list">
                     <li className="sidebar-list-item">
-                        <a href="#" className="sidebar-list-link active"><span>01.</span> My Work</a>
+                        <a href="#about-portrait about-reveal revealed" className={'sidebar-list-link' + (active === 'about' ? ' active' : '')} onClick={(e) => smoothScrollTo('#about', e)}>
+                            <span>01.</span> About Me
+                        </a>
                     </li>
                     <li className="sidebar-list-item">
-                        <a href="#" className="sidebar-list-link"><span>02.</span> About Me</a>
-                    </li>
-                    <li className="sidebar-list-item">
-                        <a href="#" className="sidebar-list-link"><span>03.</span> Playground</a>
-                    </li>
-                    <li className="sidebar-list-item">
-                        <a href="#" className="sidebar-list-link">
-                            <span>04.</span> Visitor Gallery{' '}
-                            <span style={{ color: '#b35a76', marginLeft: '5px' }}>*</span>
+                        <a href="#work" className={'sidebar-list-link' + (active === 'work' ? ' active' : '')} onClick={(e) => smoothScrollTo('#work', e)}>
+                            <span>02.</span> My Work
                         </a>
                     </li>
                 </ul>

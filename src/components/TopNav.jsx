@@ -22,8 +22,6 @@ export default function TopNav({ portfolioTo = '/' }) {
                 </div>
                 <div className="top-nav-btns">
                     <button className="btn btn-outline btn-hide-mobile" onClick={() => setResumeOpen(true)}>Resume</button>
-                    <button className="btn btn-outline btn-hide-mobile">Log in</button>
-                    <button className="btn btn-primary btn-hide-mobile">Sign up</button>
                     <button className="nav-toggle" aria-label="Toggle menu" onClick={toggle}>
                         <i className={open ? 'fas fa-times' : 'fas fa-bars'}></i>
                     </button>

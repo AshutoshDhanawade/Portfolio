@@ -1,0 +1,28 @@
+.inverted-cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    background: #ffffff;
+    mix-blend-mode: difference;
+    z-index: 99999;
+    transition:
+        opacity 0.3s ease,
+        width 0.35s cubic-bezier(0.34, 1.25, 0.64, 1),
+        height 0.35s cubic-bezier(0.34, 1.25, 0.64, 1);
+    will-change: transform, width, height;
+}
+
+.custom-cursor-active,
+.custom-cursor-active *,
+.custom-cursor-active *::before,
+.custom-cursor-active *::after {
+    cursor: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .inverted-cursor-dot {
+        transition: opacity 0.15s ease;
+    }
+}

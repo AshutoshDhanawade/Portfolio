@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 
 import CaseLayout from '../components/CaseLayout';
 import ArchitectureCanvas from '../components/fancrew/ArchitectureCanvas';
-import { usePageTitle } from '../hooks/usePageTitle';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 import { useRevealObserver } from '../hooks/useRevealObserver';
 import { useFeatureCards } from '../hooks/useFeatureCards';
@@ -124,7 +123,6 @@ const LEARN_CARDS = [
 ];
 
 export default function FanCrew() {
-    usePageTitle('Ashutosh Dhanawade - UI UX Designer');
     useScrollSpy();
     useRevealObserver();
     useFeatureCards();
@@ -1131,7 +1129,7 @@ export default function FanCrew() {
             <div className="fc-next-project">
                 <span className="fc-next-label">Next Project</span>
                 <p className="fc-next-title">
-                    <Link to="/projects/valasys">Valasys Halloween Campaign →</Link>
+                    <Link to="/projects/valasys-product-website">Valasys Product Website →</Link>
                 </p>
             </div>
         </CaseLayout>

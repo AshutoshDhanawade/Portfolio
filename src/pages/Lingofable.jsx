@@ -1,5 +1,4 @@
 import CaseLayout from '../components/CaseLayout';
-import { usePageTitle } from '../hooks/usePageTitle';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 import { useFeatureCards } from '../hooks/useFeatureCards';
 
@@ -15,7 +14,6 @@ const TOC = [
 ];
 
 export default function Lingofable() {
-    usePageTitle('Ashutosh Dhanawade - UI UX Designer');
     useScrollSpy();
     useFeatureCards();
 

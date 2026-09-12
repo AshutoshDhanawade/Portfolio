@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 
 import CaseLayout from '../components/CaseLayout';
-import { usePageTitle } from '../hooks/usePageTitle';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 import { useRevealObserver } from '../hooks/useRevealObserver';
 import { useFeatureCards } from '../hooks/useFeatureCards';
@@ -52,7 +51,6 @@ const PROCESS_STEPS = [
 ];
 
 export default function ValasysProductWebsite() {
-    usePageTitle('Ashutosh Dhanawade - UI UX Designer');
     useScrollSpy();
     useRevealObserver();
     useFeatureCards();
